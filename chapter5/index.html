@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My App</title>
+</head>
+<body>
+
+
+
+<script src="js/external/jquery-1.10.2.js"></script>
+<script src="js/external/underscore.js"></script>
+<script src="js/external/backbone.js"></script>
+
+
+<script>
+MyRouter = Backbone.Router.extend({
+
+	routes: {'hello' : 'sayHello'}, 
+
+	sayHello: function(){
+
+		console.log('Saying hello');
+	}
+
+
+});
+
+var router = new MyRouter();
+
+Backbone.history.start({pushState:true, root:"/chapter5/"});
+
+/** 
+ * Event example
+ **/
+ BookView = Backbone.View.extend({
+                updateTitleView: function(){
+                        console.log('updating title view');
+                }
+  });
+ 
+var bookView = new BookView(); 
+var thisBook = new Book({name : 'Beginning Backbone',
+                                                author: 'James Sugrue'});
+thisBook.on({ 'change:name': bookView.updateTitleView});
+
+thisBook.set('name', "Beginning Backbone.js")
+
+
+</script>
+</body>
+</html>

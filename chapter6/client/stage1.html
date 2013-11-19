@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Beginning Backbone Twitter Example</title>
+     <link rel='stylesheet' href='css/modern.css'>
+     <link rel="stylesheet" href="css/style.css">
+</head>
+<body class='metrouicss padded'>
+
+
+
+<div id='timeline' class='timeline-view'>
+	 <h2>My Tweets</h2>
+
+</div>
+
+
+
+
+<script type="text/x-handlebars-template" id="timeline-template">
+ <ul class='listview'>
+        {{#each tweet}}
+    	<li>
+          <div class='icon'>
+          		<img src='{{user.profile_image_url}}'></img>
+		    </div>
+            <div class='data'>
+                <h4>{{user.name}}</h4>
+                
+                <p>{{text}}</p>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+ </script>
+
+
+
+
+
+<!-- General Includes -->
+<script src="js/external/jquery-1.10.2.js"></script>
+<script src="js/external/underscore.js"></script>
+<script src="js/external/backbone.js"></script>
+<script src="js/external/handlebars.js"></script>
+
+<!-- Model -->
+<script src="js/app/model/Tweet.js"></script>
+
+<!-- Collections -->
+<script src="js/app/collection/Timeline.js"></script>
+
+<!-- View -->
+<script src="js/app/view/TimelineView.js"></script>
+
+
+<!-- Router -->
+<script src="js/app/router/AppRouter.js"></script>
+
+
+<!-- The 'main' for this app -->
+<script src="js/app/app.js"></script>
+
+</body>
+</html>

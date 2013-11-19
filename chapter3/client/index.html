@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My App</title>
+</head>
+<body>
+
+<script src="js/external/jquery-1.10.2.js"></script>
+<script src="js/external/underscore.js"></script>
+<script src="js/external/backbone.js"></script>
+
+
+<script>
+  // Your code goes here
+
+  Book = Backbone.Model.extend({
+	 // urlRoot: 'http://localhost:8080/books/', //use when not utilizing collections 	  
+      initialize: function(){
+		  
+		   this.on("invalid", function(model, error){
+			   console.log("**Validation Error : " + error + "**");
+		   });
+           this.on("change", function(){
+			   console.log('Model Changes Detected:');
+			   if(this.hasChanged('name')){
+				   console.log('The name has changed from '  + this.previous('name') + ' to ' + this.get('name'));
+				   
+			   }
+			   if(this.hasChanged('year')){
+				   console.log('The year has changed')
+			   }
+			   console.log('Changed attributes: ' + JSON.stringify(this.changed));
+			   console.log('Previous attributes: ' + JSON.stringify(this.previousAttributes()));
+		   });
+		   this.on("change:name", function(){
+			   console.log('The name attribute has changed');  
+		   });
+      }, 
+	 
+   defaults: {
+     name: 'Book Title', 
+     author: 'No One'
+	}, 
+	
+	printDetails: function(){
+		console.log(this.get('name') + ' by ' + this.get('author'));
+	}, 
+	
+	validate: function(attrs){
+		if(attrs.year < 2000){
+			return 'Year must be after 2000';
+		}
+		if(!attrs.name){
+			return 'A name must be provided';
+		}
+	}, 
+	parse: function(response, xhr) {
+		response.bookType = 'ebook';
+		return response;
+	  }, 
+
+	
+});
+
+
+var thisBook = new Book({name : 'Beginning Backbone', 
+						 author: 'James Sugrue'});
+console.log(thisBook.get('name') + ' by ' + thisBook.get('author'));
+//change the value of an attribute
+thisBook.set('name', 'Beginning Backbone.js');
+console.log(thisBook.get('name') + ' by ' + thisBook.get('author'));
+//add a new attribute (which will later be removed) 
+thisBook.set('year', 2013);
+console.log('Book year ' + thisBook.get('year'));
+//remove the attribute
+thisBook.unset('year');
+console.log('Book year ' + thisBook.get('year'));
+//check for the existance of an attribute 
+var hasYear = thisBook.has('year'); //results in false
+var hasName = thisBook.has('name'); //results in true
+console.log('Has an attribute called year  : ' + hasYear);
+console.log('Has an attribute called name  : ' + hasName);
+
+//create a new object
+var newBook = new Book({name: 'Another Book', author: 'You'});
+newBook.clear();//remove all attributes
+console.log('Has an attribute called name  : ' + newBook.has('name'));//results in false
+
+
+//create a clone 
+var clonedBook = thisBook.clone();
+
+//use the printDetails function
+thisBook.printDetails();
+
+//set the variable (expect change handler)
+thisBook.set('year', 2014); //change handler invoked
+thisBook.set('year', 2014, {silent:true});//no change handler invoked
+
+//try setting the year to pre 2000 
+thisBook.set('year', 1999, {validate: true});
+console.log('Check year change: ' + thisBook.get('year'));
+thisBook.unset('name', {validate: true});
+console.log('Check if name was removed ' + thisBook.get('name'));
+
+//check if model is valid 
+console.log('Is model valid: ' + thisBook.isValid());
+//break the validation rules by not using the validate flag 
+thisBook.set('year', 1998); 
+//check if the model is valid 
+console.log('Is model valid: ' + thisBook.isValid());
+
+thisBook.set('year', 2013);
+//thisBook.set('isbn', '9781430263340')
+console.log('Id: '  +thisBook.get('id')); 
+console.log('ISBN: '  +thisBook.get('isbn')); 
+
+//save book snippet
+/*
+thisBook.save(thisBook.attributes, 
+{
+	success: function(model, response, options){ 
+		console.log('Model saved');
+		console.log('Id: '  +thisBook.get('id')); 
+			console.log('Book type: ' + thisBook.get('bookType'));
+	}, 
+	error: function(model, xhr, options){ 
+		console.log('Failed to save model');
+	}
+});
+*/
+
+EBook = Book.extend({
+
+	getWebLink: function(){
+		return 'http://www.apress.com/'+this.get('name');
+	}, 
+
+	printDetails: function(){
+
+		console.log('An ebook');
+		Book.prototype.printDetails.call(this);
+	}
+
+});
+
+var ebook = new EBook({name: "Beginning Backbone", author: "James Sugrue"});
+console.log(ebook.getWebLink());
+
+console.log(ebook.printDetails());
+//fetch model code snippet
+/*	thisBook.set('year', 2014);
+//reset book state to server state
+thisBook.fetch({
+success: function(model, response, options){
+	console.log('Fetch success');
+}, 
+error: function(model, response, options){
+	console.log('Fetch error');
+}
+});
+*/
+
+//destroy model code snippet
+/*thisBook.destroy({
+		success: function(model, response, options){
+			console.log('Destroy success');
+		}, 
+		error: function(model, response, options){
+			console.log('Destroy error');
+		}
+	});*/
+
+/** 
+ * Define a collection based on book 
+ **/
+ var Library = Backbone.Collection.extend({model: Book, 
+ 	url: 'http://localhost:8080/books/',	  
+
+ 	initialize: function(){
+ 		console.log('Creating a new library collection');
+ 		this.on("remove", function(removedModel, models, options){
+ 			console.log('element removed  at ' + options.index);
+ 		});
+
+ 		this.on('reset', function(){
+ 			console.log('Reset detected');
+ 		});
+
+ 	},
+ 	 comparator:  function(a, b) {
+  		return a.get('name') < b.get('name') ? -1 : 1;
+	 }, 
+
+	 parse: function(response, xhr) {
+	 	//customisations here
+		return response;
+	  }, 
+
+
+ });
+
+ var bookOne = new Book({name: 'Beginning Backbone', author: 'James Sugrue', year: 2013}); 
+ var bookTwo = new Book({name: 'Pro Javascript Design Patterns', author:'Dustin Diaz, Ross Harmes', year: 2012});
+
+ var myLibrary = new Library([bookOne, bookTwo]);
+ console.log('Library contains ' + myLibrary.length + ' books');
+
+ var bookThree = new Book({name: 'Pro Node.js for Developers', author: 'Colin J. Ihrig', year: 2011});
+ myLibrary.add(bookThree);
+ console.log('Library contains ' + myLibrary.length + ' books');
+
+
+ var bookFour = new Book({name: 'Pro jQuery', author: 'Adam Freeman'});
+ var bookFive = new Book({name : 'Pro Javascript Performance', author: 'Tom Barker'});
+ myLibrary.add([bookFour, bookFive]);
+console.log('Library contains ' + myLibrary.length + ' books');
+
+bookOne.set('year', 2013); 
+myLibrary.add(bookOne);
+console.log('Library contains ' + myLibrary.length + ' books');
+console.log('Year: ' + myLibrary.get(bookOne).get('year'));
+myLibrary.add(bookOne, {merge: true});
+console.log('Library contains ' + myLibrary.length + ' books');
+console.log('Year: ' + myLibrary.get(bookOne).get('year'));
+
+
+myLibrary.remove(bookFive);
+console.log('Library contains ' + myLibrary.length + ' books');
+myLibrary.remove([bookThree, bookFour]);
+console.log('Library contains ' + myLibrary.length + ' books');
+
+myLibrary.reset([bookOne]);
+console.log('Library contains ' + myLibrary.length + ' books');
+	
+myLibrary.reset();
+console.log('Library contains ' + myLibrary.length + ' books');
+
+
+myLibrary = new Library([bookOne, bookTwo]);
+console.log('Library contains ' + myLibrary.length + ' books');
+
+myLibrary.set([bookTwo], {remove: false});
+console.log('Library contains ' + myLibrary.length + ' books');
+
+var aBook = myLibrary.get('c5');
+console.log('A book called ' + aBook.get('name'));
+
+var anotherBook = myLibrary.at(1);
+console.log('Another book is called ' + anotherBook.get('name'));
+
+var nosuchBook = myLibrary.at(20);//results in undefined
+
+//a simple loop 
+for(var i = 0; i < myLibrary.length; i++){
+	var model = myLibrary.at(i);
+	console.log('Book ' + i + ' is called ' + model.get('name'));
+}
+
+//using forEach 
+myLibrary.forEach(function(model){
+	console.log('Book is called ' + model.get('name'));
+});
+
+
+var shuffled = myLibrary.shuffle();
+console.log('Shuffled: ' + shuffled.length);
+
+//test sortBy 
+myLibrary.reset([bookThree, bookTwo, bookOne]);
+//check current order 
+console.log("Unsorted Version:");//if no comparator is provided for your collection
+myLibrary.forEach(function(model){
+	console.log('Book is called ' + model.get('name'));
+});
+//sort collection
+var sortedByName = myLibrary.sortBy(function (book) {
+    return book.get("name");
+});
+console.log("Sorted Version:");
+
+sortedByName.forEach(function(model){
+	console.log('Book is called ' + model.get('name'));
+});
+
+
+myLibrary.at(0).set('name', 'Z');
+console.log('Sorting order destroyed'); 
+myLibrary.forEach(function(model){
+	console.log('Book is called ' + model.get('name'));
+});
+//force sort 
+myLibrary.sort();
+console.log('Sorting order reapplied'); 
+myLibrary.forEach(function(model){
+	console.log('Book is called ' + model.get('name'));
+});
+
+console.log('List of authors in collection:'); 
+var authors = myLibrary.pluck('author');
+authors.forEach(function(authorName){
+	console.log(authorName)
+});
+
+//search functions 
+
+var result = myLibrary.findWhere({author:'James Sugrue'});
+console.log('Result: ' + result.get('author'));
+
+var results = myLibrary.where({author:'James Sugrue'});
+console.log('Found: ' + results.length + ' matches'); 
+
+//RESTful operations 
+var myOnlineLibrary = new Library();
+
+myOnlineLibrary.fetch({
+		success: function(e){
+			console.log('Got data. Library now has ' + myOnlineLibrary.size() + ' books');
+		}, 
+		error: function(e){
+			console.log('Something went wrong');
+		}
+}); 
+
+//add a model to the collection and save to server 
+myOnlineLibrary.add(bookOne);
+bookOne.save({
+		success: function(e){
+			console.log('Book saved to server');
+			//now delete that book again 
+			bookOne.destroy({
+				success: function(e){
+					console.log('Book deleted')
+				},
+				error: function(e){
+					console.log('Error deleting book');
+				}
+			});
+
+
+		},
+		error: function(e){
+			console.log('Error saving book');
+		}
+});
+
+
+//add to the collection and save all at once
+myOnlineLibrary.create(bookTwo);
+
+
+
+</script>
+</body>
+</html>
