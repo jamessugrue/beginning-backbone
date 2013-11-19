@@ -1,0 +1,19 @@
+.metrouicss{
+	margin: 10px;
+}
+
+.badge{
+	width: 200px!important;
+	height: 24px;
+
+}
+
+.search-view{
+	width: 310px;
+
+}
+
+.timestamp{
+	float: right;
+	font-size: 0.9em;
+}

@@ -1,0 +1,10 @@
+ <script type="text/x-handlebars-template" id="library-template">
+ <ul>
+ 	{{#each library}}
+        <li>
+        {{#log name 4}}{{/log}}
+         <em>{{name}}</em> by {{author}}
+      </li>
+	{{/each}} 
+  </ul>
+ </script>

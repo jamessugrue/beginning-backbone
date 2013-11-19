@@ -1,0 +1,69 @@
+
+<div id="app" class="grid">
+        <div class="row">
+            <div class="span8">
+                
+                <div id='timeline' class='timeline-view'>
+                 <h2>My Tweets</h2>
+              </div>
+            </div>
+
+            <div class="span4">
+               
+              
+      
+
+                <div id="profile" class="profile-view">
+                    <!-- This would be the template --> 
+                   
+               
+                </div>
+
+                  <div id="search" class="search-view">
+                    <form>
+                          <div class="input-control text">
+                               <input type="text" id="searchbox" autofocus="" placeholder="I'm looking for..">
+                            </div>
+                              <button class="bg-color-blue" id="searchbutton">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Template for profile -->
+<script type="text/x-handlebars-template" id="profile-template">
+ <div class='tiles clearfix'>
+    <div class="tile double bg-color-orangeDark">
+      <div class="tile-content">
+          <img src="{{user.profile_image_url}}" class="place-left">
+          <h3 style="margin-bottom: 5px;">{{user.name}}</h3>
+          <p>{{user.description}}</p>
+          <div class="brand">
+              <div class="badge">{{user.followers_count}} Followers</div>
+          </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+<!-- Template for timeline -->
+
+<script type="text/x-handlebars-template" id="timeline-template">
+ <ul class='listview fluid'>
+        {{#each tweet}}
+    	<li>
+          <div class='icon'>
+          		<img src='{{user.profile_image_url}}'></img>
+		    </div>
+            <div class='data'>
+                <h4>{{user.name}}</h4>
+                
+                <p>{{format text}}</p>
+                <p class="timestamp"><i>{{friendlyDate}}</i></p>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+ </script>

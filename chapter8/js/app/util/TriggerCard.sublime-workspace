@@ -1,0 +1,2460 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"timeL",
+				"timelineView"
+			],
+			[
+				"time",
+				"timeline"
+			],
+			[
+				"timeline",
+				"timelineView"
+			],
+			[
+				"get",
+				"getReTweetsOfMe  (function)"
+			],
+			[
+				"fir",
+				"fireEvent"
+			],
+			[
+				"recorded",
+				"recordedTrips"
+			],
+			[
+				"missingMem",
+				"missingMember"
+			],
+			[
+				"missingTrip",
+				"missingTripRoute"
+			],
+			[
+				"find",
+				"findPoolMember"
+			],
+			[
+				"member",
+				"memberId"
+			],
+			[
+				"coord",
+				"coordinator"
+			],
+			[
+				"mob",
+				"mobileTrip"
+			],
+			[
+				"milli",
+				"millisecond"
+			],
+			[
+				"border-col",
+				"border-color"
+			],
+			[
+				"removedSTo",
+				"removedStopList"
+			],
+			[
+				"removedSto",
+				"removedStopList"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "s",
+			"settings":
+			{
+				"buffer_size": 1,
+				"line_ending": "Unix",
+				"name": "s"
+			}
+		},
+		{
+			"contents": "Searching 148 files for \"setImage\"\n\n/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/controllers/login.js:\n   13  	});\n   14  }\n   15: $.logo.setImage(img);\n   16  \n   17  \n\n/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/lib/image.js:\n   60  	},\n   61  \n   62: 	setImage : function(imageView, url, defaultPhoto) {\n   63  		if (defaultPhoto) {\n   64  			imageView.image = defaultPhoto;\n\n/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/widgets/template.homeCityNewUser/controllers/widget.js:\n   17  \n   18  		_.defer(function() {\n   19: 			self._image.setImage($.photo, user.photo, \"default_photo.png\");\n   20  		});\n   21  	},\n\n/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/widgets/template.perfectMatchItem/controllers/widget.js:\n  100  \n  101  		_.defer(function() {\n  102: 			self._image.setImage($.abbrPhoto, match.photo, \"default_photo.png\");\n  103  		});\n  104  \n  105  		_.defer(function() {\n  106: 			self._image.setImage($.detailsPhoto, match.photo, \"default_photo.png\");\n  107  		});\n  108  	},\n\n5 matches across 4 files\n\n\nSearching 148 files for \"alert\"\n\n/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/lib/geoLocationService.js:\n    8  	\n    9  	if(! e.success || e.error ) {\n   10: 		alert(\"Unable to get your location.\");\n   11  		Ti.API.debug(JSON.stringify(e));\n   12  		Ti.API.debug(e);\n\n/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/lib/modal.js:\n    8  	error: function(messageId) {\n    9  		// simplest prompt ever...\n   10: 		alert(L(messageId));\n   11  	}\n   12  };\n\n/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/widgets/card.addPhoto/controllers/widget.js:\n   53  			success: function() {\n   54  				self.removeView();\n   55: 				Ti.UI.createAlertDialog({\n   56  					message: \"Success !\",\n   57  					ok: \"OK\",\n\n/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/widgets/card.addTrip/controllers/widget.js:\n   26  \n   27  	_createTrip: function() {\n   28: 		alert(\"Trip: Cork to Kinsale Created !\");\n   29  		this.removeView();\n   30  	},\n\n/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/widgets/card.perfectMatch/controllers/widget.js:\n  175  \n  176  	_showMoreMatches: function() {\n  177: 		alert(\"Show more matches\");\n  178  	}\n  179  \n\n/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/widgets/card.postFirstTrip/controllers/widget.js:\n   32  		var self = this;\n   33  \n   34: 		var prompt = Ti.UI.createAlertDialog({\n   35  			title: \"Cork to Kinsale\",\n   36  			message: \"Click OK to create your first trip\",\n   ..\n   43  			if (e.index !== e.source.cancel) {\n   44  \n   45: 				var confirm = Ti.UI.createAlertDialog({\n   46  					title: \"Congratulations\",\n   47  					message: \"You have created your first trip: Cork to Kinsale\",\n\n/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/widgets/template.perfectMatchItem/controllers/widget.js:\n  117  \n  118  	_requestRide: function() {\n  119: 		alert(\"Request ride\");\n  120  	},\n  121  \n  122  	_offerRide: function() {\n  123: 		alert(\"Offer ride\");\n  124  	},\n  125  \n\n/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/widgets/template.webView/controllers/widget.js:\n   41      Ti.Geolocation.getCurrentPosition( function(e){\n   42  		if (!e.success || e.error) {\n   43: 			alert('error ' + JSON.stringify(e.error));\n   44  			return;\n   45  		}\n   ..\n   48  		_.delay(function(){\n   49  			injectLocation(e.coords);\n   50: 				Ti.UI.createAlertDialog({ message: \"location update\" + JSON.stringify(e.coords) }).show();\n   51  		},500);\n   52  	});\n   ..\n   65  	console.log(\"webView get location\" + JSON.stringify(d));\n   66  	injectLocation(d);\n   67: 	Ti.UI.createAlertDialog({ message: \"location update\" + JSON.stringify(d) }).show();\n   68  });\n   69  \n\n12 matches across 8 files\n\n\nSearching 148 files for \"error loading\"\n\n0 matches across 0 files\n\n\nSearching 148 files for \"beforeloading\"\n\n/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/widgets/template.webView/controllers/widget.js:\n   56  $.webView.addEventListener('beforeload', function(data) {\n   57  	\n   58: 	console.log(\"beforeloading.......\");\n   59  });\n   60  \n\n1 match in 1 file\n\n\nSearching 153 files for \"injectLocation\"\n\n/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/widgets/template.webView/controllers/widget.js:\n    9  }\n   10  \n   11: function injectLocation(location){\n   12  	var str = [];\n   13: 	str.push(\"avego.rtr.utils.NativeAppConnector.injectLocation(\");\n   14  	str.push(location.latitude);\n   15  	str.push(\",\");\n   ..\n   47  		console.log(\"webView get current location\" + JSON.stringify(e.coords));\n   48  		_.delay(function(){\n   49: 			injectLocation(e.coords);\n   50  //				Ti.UI.createAlertDialog({ message: \"location update\" + JSON.stringify(e.coords) }).show();\n   51  		},500);\n   ..\n   74  	Ti.API.debug(JSON.stringify(d));\n   75  	console.log(\"webView get location\" + JSON.stringify(d));\n   76: 	injectLocation(d);\n   77  	Ti.UI.createAlertDialog({ message: \"location update\" + JSON.stringify(d) }).show();\n   78  });\n\n4 matches in 1 file\n",
+			"settings":
+			{
+				"buffer_size": 5232,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/widgets/template.webView/controllers/widget.js",
+			"settings":
+			{
+				"buffer_size": 3046,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/lib/image.js",
+			"settings":
+			{
+				"buffer_size": 2665,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/widgets/card.staticMap/controllers/widget.js",
+			"settings":
+			{
+				"buffer_size": 7531,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/widgets/card.staticMap/views/widget.xml",
+			"settings":
+			{
+				"buffer_size": 1236,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/widgets/card.staticMap/styles/widget.tss",
+			"settings":
+			{
+				"buffer_size": 1149,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<p><i>This article provides a practical introduction to graph databases with a focus on the Groovy ecosystem. It explores Grails GORM support for Neo4j as well as query comparisons between the Neo4j Cypher language, SQL and the Gremlin graph DSL.</i></p>\n\n<blockquote>\n<p><i>This article originally appeared in the&nbsp;<a href=\"http://www.groovymag.com/main.issues.description/id=57/\" style=\"font-style: inherit; color: rgb(51, 51, 51);\">May 2013 issue of GroovyMag</a>.</i></p>\n</blockquote>\n<h1><i>Graph theory and terminology\n<p>A graph is a way of modeling connections or relationships between nodes or vertices. These relationships, or edges, may be directed (a digraph in mathematical terminology) as shown in Figure 1. Parent-child relationships may form a tree; with additional associations these form a network.</p>\n<div><a href=\"http://leanjavaengineering.files.wordpress.com/2013/08/figure1.png\" style=\"font-style: inherit; color: rgb(51, 51, 51);\"><img src=\"http://leanjavaengineering.files.wordpress.com/2013/08/figure1.png?w=300&amp;h=232\" alt=\"Figure 1: a directed graph\" width=\"300\" height=\"232\" class=\"size-medium wp-image-621\" style=\"margin-top: 2px; max-width: 98.5%;\"></a>\n<p>Figure 1: a directed graph</p>\n</div>\n\n<p>A weighted graph (Figure 2) has a weight on every edge. Weighted networks can be used for modeling road networks with the weights representing distances; in conjunction with shortest-path graph algorithms such as Dijkstra’s algorithm, these are used for example for minimizing the distance travelled by delivery lorries.</p>\n<div><a href=\"http://leanjavaengineering.files.wordpress.com/2013/08/figure2.png\" style=\"font-style: inherit; color: rgb(51, 51, 51);\"><img src=\"http://leanjavaengineering.files.wordpress.com/2013/08/figure2.png?w=300&amp;h=206\" alt=\"Figure 2: a weighted graph\" width=\"300\" height=\"206\" class=\"size-medium wp-image-622\" style=\"margin-top: 2px; max-width: 98.5%;\"></a>\n<p>Figure 2: a weighted graph</p>\n</div>\n\n<p>Figure 3 shows a loop, which is a self-referencing edge.</p>\n<div><a href=\"http://leanjavaengineering.files.wordpress.com/2013/08/figure3.png\" style=\"font-style: inherit; color: rgb(51, 51, 51);\"><img src=\"http://leanjavaengineering.files.wordpress.com/2013/08/figure3.png?w=500\" alt=\"Figure 3: a graph loop\" class=\"size-full wp-image-623\" style=\"margin-top: 2px; max-width: 98.5%;\"></a>\n<p>Figure 3: a graph loop</p>\n</div>\n\n<p>Figure 4 shows a Property Graph; this type of graph allows properties on both nodes and edges.</p>\n<div><a href=\"http://leanjavaengineering.files.wordpress.com/2013/08/figure4.png\" style=\"font-style: inherit; color: rgb(51, 51, 51);\"><img src=\"http://leanjavaengineering.files.wordpress.com/2013/08/figure4.png?w=300&amp;h=140\" alt=\"Figure 4: A Property Graph\" width=\"300\" height=\"140\" class=\"size-medium wp-image-624\" style=\"margin-top: 2px; max-width: 98.5%;\"></a>\n<p>Figure 4: A Property Graph</p>\n</div>\n</i></h1>\n<h2>Sample graph\n<p>One of the main examples that is often used in current introductory material is a social graph much like Figure 4. Instead for the first practical example we’ll explore a different scenario: the relationships between a development project, the skills required and the team members involved as shown in Figure 5 (projects are denoted in orange, skills in blue and employees in green).</p>\n<div><a href=\"http://leanjavaengineering.files.wordpress.com/2013/08/figure5.png\" style=\"font-style: inherit; color: rgb(51, 51, 51);\"><img src=\"http://leanjavaengineering.files.wordpress.com/2013/08/figure5.png?w=300&amp;h=256\" alt=\"Figure 5: Sample skill graph\" width=\"300\" height=\"256\" class=\"size-medium wp-image-625\" style=\"margin-top: 2px; max-width: 98.5%;\"></a>\n<p>Figure 5: Sample skill graph</p>\n</div>\n</h2>\n<h2>What is a graph database?\n<p>Graph databases uses property graphs, where both nodes and edges can have properties. One of the terms that is frequently used to describe graph databases is ‘index-free adjacency’, meaning that each node knows the location of the nodes that it is connected to without needing to perform an index lookup. In fact, this is often a key distinction between a graph database and a non-native store.</p>\n</h2>\n<h3>WHEN SHOULD YOU USE A GRAPH DATABASE?\n<p>Now many people may jump on the bandwagon to use a ‘shiny new’ technology. The lesson that people should be taking away from the NoSQL movement is that the most appropriate data store technology should be utilized. Non-functional requirements are very important, as the solution will need to be operated in a production environment.</p>\n\n<p>The best fit is for highly associative data sets where the (semi-structured) relationships are of critical importance to the value of the data. Graph databases may offer significant performance improvements over a relational model for this type of data as edges can be traversed at O(1) rather than requiring significant amounts of I/O operations to perform joins.</p>\n\n<p>For the practical aspects of the article we’ll primarily use Neo4j (<a href=\"http://neo4j.org/\" rel=\"nofollow\" style=\"font-style: inherit; color: rgb(51, 51, 51);\">http://neo4j.org</a>), which is described as the world’s leading graph database, before looking at some of the alternatives.</p>\n\n<p>All the code is available on GitHub from<a href=\"https://github.com/rbramley/GroovyMagGraphs\" rel=\"nofollow\" style=\"font-style: inherit; color: rgb(51, 51, 51);\">https://github.com/rbramley/GroovyMagGraphs</a></p>\n</h3>\n<h1>Using a graph database in a Grails application\n<p>For the first example, we’ll explore a domain model that encapsulates a ‘project database’. We’ll start by installing the GORM-based plugin for Neo4j (<a href=\"http://www.grails.org/plugin/neo4j\" rel=\"nofollow\" style=\"font-style: inherit; color: rgb(51, 51, 51);\">http://www.grails.org/plugin/neo4j</a>&nbsp;– the plugin manual is available at<a href=\"http://springsource.github.io/grails-data-mapping/neo4j/manual/guide/index.html\" rel=\"nofollow\" style=\"font-style: inherit; color: rgb(51, 51, 51);\">http://springsource.github.io/grails-data-mapping/neo4j/manual/guide/index.html</a>):</p>\n\n<pre class=\"brush:shell\">grails install-plugin neo4j</pre>\n\n<p>Then configure the datasource for the plugin along the lines of Listing 1, but choosing an appropriate data file location for your system.</p>\n\n<pre class=\"brush:groovy\"><br>\ngrails {<br>\n&nbsp;neo4j {<br>\n&nbsp;type = \"embedded\"<br>\n&nbsp;location = \"/usr/local/Cellar/neo4j/data\"<br>\n&nbsp;}<br>\n}</pre>\n<p>\n<i>Listing 1: Neo4j plugin datasource configuration</i></p>\n\n<p>We’ll use scaffolded controllers and views for speed, so let’s define the domain model to match Figure 5. The domain classes required are Skill shown in Listing 2, Employee shown in Listing 3 and Project as per Listing 4 – they all inform GORM that they are for Neo4j by using&nbsp;<code>static mapWith = \"neo4j\"</code>.</p>\n\n<pre class=\"brush:groovy\">package neo<br>\n&nbsp;<br>\nimport groovy.transform.ToString<br>\n&nbsp;<br>\n@ToString(includes='name')<br>\nclass Skill {<br>\n&nbsp;String name<br>\n&nbsp;static constraints = {}<br>\n&nbsp;static mapWith = \"neo4j\"<br>\n}</pre><p>\n<i>Listing 2: a simple Skill representation</i></p>\n\n<pre class=\"brush:groovy\">package neo<br>\n&nbsp;<br>\nimport groovy.transform.ToString<br>\n&nbsp;<br>\n@ToString(includes='name')<br>\nclass Employee {<br>\n&nbsp;String name<br>\n&nbsp;String title<br>\n&nbsp;Date dob<br>\n&nbsp;<br>\n&nbsp;static hasMany = [ workedOn : Project, knows : Skill ]<br>\n&nbsp;<br>\n&nbsp;static constraints = {}<br>\n&nbsp;static mapWith = \"neo4j\"<br>\n}</pre><p>\n<i>Listing 3: a simple Employee representation</i></p>\n\n<pre class=\"brush:groovy\">package neo<br>\n&nbsp;<br>\nimport groovy.transform.ToString<br>\n&nbsp;<br>\n@ToString(includes='projectName')<br>\nclass Project {<br>\n&nbsp;String customerName<br>\n&nbsp;String projectName<br>\n&nbsp;Date startDate<br>\n&nbsp;Date endDate<br>\n&nbsp;<br>\n&nbsp;static hasMany = [ members : Employee, requiredSkills : Skill ]<br>\n&nbsp;<br>\n&nbsp;static constraints = {}<br>\n&nbsp;static belongsTo = Employee<br>\n&nbsp;static mapWith = \"neo4j\"<br>\n}</pre><p>\n<i>Listing 4: a simple Project representation</i></p>\n\n<p>In summary it is very easy to create the simple Grails object domain model with one-to-many and many-to-many relationships and map them with Neo4j.</p>\n\n<p>Following this you’ll need to create the controllers, set to scaffold, run, and populate data. Figure 6 illustrates the view of the Figure 5 graph as seen from the Project view action – job done!</p>\n<div><a href=\"http://leanjavaengineering.files.wordpress.com/2013/08/figure6.png\" style=\"font-style: inherit; color: rgb(51, 51, 51);\"><img src=\"http://leanjavaengineering.files.wordpress.com/2013/08/figure6.png?w=300&amp;h=266\" alt=\"Figure 6: An application view of the graph from Figure 5\" width=\"300\" height=\"266\" class=\"size-medium wp-image-626\" style=\"margin-top: 2px; max-width: 98.5%;\"></a>\n<p>Figure 6: An application view of the graph from Figure 5</p>\n</div>\n\n<p>The simple project database was such a success that HR want to extend it to provide a Skills Matrix. This new requirement will necessitate a richer domain model to capture more details about employee skill levels and experience; in a relational database world we could happily augment the many-to-many link table between Employee and Skill – with a Property Graph we can add properties to an edge.</p>\n\n<p>This is where we’ve reached the limitations of the GORM plugin, which is designed for 80% use cases (see<a href=\"http://stackoverflow.com/questions/10647834/architecting-a-neo4j-based-application-stick-to-vanilla-api-using-plain-nodes\" rel=\"nofollow\" style=\"font-style: inherit; color: rgb(51, 51, 51);\">http://stackoverflow.com/questions/10647834/architecting-a-neo4j-based-application-stick-to-vanilla-api-using-plain-nodes</a>).</p>\n\n<p>So it looks like the best way to use Neo4j to exploit the power of the graph with Grails is to forego GORM/scaffolding. Which isn’t that much of an issue for ‘real’ projects as opposed to prototyping.</p>\n</h1>\n<h2>Spring Data to the rescue\n<p>If you don’t want to couple your application directly to the native datastore APIs, then Spring Data is one option. Spring Data provides a set of data access APIs with implementations for a number of NoSQL technologies.</p>\n\n<p>The Spring Data Neo4j support includes&nbsp;<code>@RelationshipEntity</code>&nbsp;annotations (<a href=\"http://static.springsource.org/spring-data/data-neo4j/docs/2.0.0.RELEASE/reference/html/#d0e1889\" rel=\"nofollow\" style=\"font-style: inherit; color: rgb(51, 51, 51);\">http://static.springsource.org/spring-data/data-neo4j/docs/2.0.0.RELEASE/reference/html/#d0e1889</a>) for adding properties to graph edges.</p>\n</h2>\n<h1>Six degrees of Kevin Bacon</h1>\n<h2>Neo4j &amp; Cypher\n<p>Neo4j also provides a native traversal API and a declarative query language called Cypher.</p>\n\n<p>For this example we’ll manipulate the graph using a Groovy script and we’ll play a game of ’6 degrees of Kevin Bacon’ (<a href=\"http://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon\" rel=\"nofollow\" style=\"font-style: inherit; color: rgb(51, 51, 51);\">http://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon</a>) with a small network.</p>\n\n<p>The network we’ll define is illustrated in Figure 7, the blue shades signify movies and the green shades signify actors, with the exception of Kevin Bacon who is denoted in orange. The darker shades are first-degree connections and the lighter shades are second-degree connections.</p>\n<div><a href=\"http://leanjavaengineering.files.wordpress.com/2013/08/figure7.png\" style=\"font-style: inherit; color: rgb(51, 51, 51);\"><img src=\"http://leanjavaengineering.files.wordpress.com/2013/08/figure7.png?w=500&amp;h=501\" alt=\"Figure 7: A small Kevin Bacon graph\" width=\"500\" height=\"501\" class=\"size-large wp-image-627\" style=\"margin-top: 2px; max-width: 98.5%;\"></a>\n<p>Figure 7: A small Kevin Bacon graph</p>\n</div>\n</h2>\n<h2>Script goodies\n<p>Groovy missing method meta-programming is used in Listing 5 to make establishing relationships feel more natural e.g.&nbsp;<code>movie.featured(actor)</code>. This is using an outbound edge from a movie node into an actor node.</p>\n\n<pre class=\"brush:groovy\">// an enum helper<br>\nenum MyRelationshipTypes implements RelationshipType { featured }<br>\n&nbsp;<br>\n// metaclass magic<br>\nNode.metaClass {<br>\n&nbsp;propertyMissing { String name, val -&gt; delegate.setProperty(name, val) }<br>\n&nbsp;propertyMissing { String name -&gt; delegate.getProperty(name) }<br>\n&nbsp;methodMissing { String name, args -&gt; delegate.createRelationshipTo(args[0], MyRelationshipTypes.\"$name\") }<br>\n}</pre><p>\n<i>Listing 5: Groovy DSL meta-programming</i></p>\n\n<p>Additionally Listing 6 defines a helper method so that we can specify the graph using a list of simple triples (e.g. ‘Footloose-FEATURED-Kevin Bacon’) rather than having to write lots of boilerplate code to create each node and define the edges.</p>\n\n<p>An alternative would be to use the GEOFF notation, which is closely aligned with the Neo4j Cypher query syntax (more information later) – however this requires an additional plugin.</p>\n\n<pre class=\"brush:groovy\">// keep the graph creation DRY<br>\ndef getOrCreateNode(db, map, key, type) {<br>\n&nbsp;def node<br>\n&nbsp;<br>\n&nbsp;if(map.containsKey(key)) {<br>\n&nbsp;node = map.get(key)<br>\n&nbsp;} else {<br>\n&nbsp;node = db.createNode()<br>\n&nbsp;node.name = key<br>\n&nbsp;node.type = type<br>\n&nbsp;<br>\n&nbsp;map.put(key, node)<br>\n&nbsp;}<br>\n&nbsp;<br>\n&nbsp;node<br>\n}<br>\n&nbsp;<br>\n// helper method to create the graph<br>\nvoid createGraph(db, gd) {<br>\n&nbsp;def movieMap = [:]<br>\n&nbsp;def actorMap = [:]<br>\n&nbsp;<br>\n&nbsp;gd.each { str -&gt;<br>\n&nbsp;def movie, actor<br>\n&nbsp;<br>\n&nbsp;def parts = str.split('-')<br>\n&nbsp;def movieKey = parts[0]<br>\n&nbsp;def actorKey = parts[2]<br>\n&nbsp;<br>\n&nbsp;movie = getOrCreateNode(db, movieMap, movieKey, 'Movie')<br>\n&nbsp;actor = getOrCreateNode(db, actorMap, actorKey, 'Actor')<br>\n&nbsp;<br>\n&nbsp;// set up the edge<br>\n&nbsp;movie.featured(actor)<br>\n&nbsp;}<br>\n}</pre><p>\n<i>Listing 6: Graph construction code</i></p>\n</h2>\n<h2>Neo4j setup\n<p>Listing 7 shows that the script uses an impermanent database, from the Neo4j testing utils module, to simplify re-execution rather than having to tidy up the data directory used by an embedded instance. It also requires a Lucene index for nodes so that we can search by name.</p>\n\n<pre class=\"brush:groovy\">// Set up an impermanent test instance (this saves having to write disk clean up)<br>\ndef db = new ImpermanentGraphDatabase([:], [new LuceneIndexProvider()], [], [new SoftCacheProvider()])<br>\n&nbsp;<br>\ndef nodeAutoIndexer = db.index().getNodeAutoIndexer()<br>\nnodeAutoIndexer.startAutoIndexingProperty(\"name\")<br>\nnodeAutoIndexer.setEnabled(true)</pre><p>\n<i>Listing 7: Neo4j graph database setup</i></p>\n</h2>\n<h2>Data population\n<p>With the helper methods from Listing 6 and the data in Listing 8, this makes the node creation mainly a case of demarcating the transaction as shown in Listing 9.</p>\n\n<pre class=\"brush:groovy\">// Describe a graph as triples e.g. Movie-FEATURED-Actor<br>\ndef graphDescription = [<br>\n&nbsp;'Footloose-FEATURED-Kevin Bacon',<br>\n&nbsp;'Footloose-FEATURED-John Lithgow',<br>\n&nbsp;'Shrek-FEATURED-Mike Myers',<br>\n&nbsp;'Shrek-FEATURED-John Lithgow',<br>\n&nbsp;'Shrek-FEATURED-Cameron Diaz',<br>\n&nbsp;\"Charlie's Angels-FEATURED-Cameron Diaz\",<br>\n&nbsp;\"Charlie's Angels-FEATURED-Bill Murray\",<br>\n&nbsp;'54-FEATURED-Mike Myers',<br>\n&nbsp;'54-FEATURED-Neve Campbell',<br>\n&nbsp;'Wild Things-FEATURED-Neve Campbell',<br>\n&nbsp;'Wild Things-FEATURED-Bill Murray',<br>\n&nbsp;'Wild Things-FEATURED-Kevin Bacon'<br>\n]</pre><p>\n<i>Listing 8: the representation of the graph from Figure 7</i></p>\n\n<pre class=\"brush:groovy\">def tx<br>\ntry {<br>\n&nbsp;tx = db.beginTx()<br>\n&nbsp;<br>\n&nbsp;db.index().forNodes(\"node_auto_index\")<br>\n&nbsp;<br>\n&nbsp;// create the nodes for the fixture data<br>\n&nbsp;createGraph(db, graphDescription)<br>\n&nbsp;<br>\n&nbsp;tx.success()<br>\n} finally {<br>\n&nbsp;tx?.finish()<br>\n}</pre><p>\n<i>Listing 9: Transaction for index and graph creation</i></p>\n</h2>\n<h2>Cypher\n<p>Cypher is a declarative query language, and for more information I’d recommend the very good reference guide which provides executable samples generated from tests:&nbsp;<a href=\"http://docs.neo4j.org/chunked/stable/cypher-query-lang.html\" rel=\"nofollow\" style=\"font-style: inherit; color: rgb(51, 51, 51);\">http://docs.neo4j.org/chunked/stable/cypher-query-lang.html</a></p>\n\n<p>Now everything is in place and we’ve populated the data, it’s time to perform the query in Listing 10 to discover the second-degree connections in the graph and the routes to them as can be seen in Figure 8. We tell Cypher the starting node to find in the index, then how to match the output using 4 hops (Movie-Actor-Movie-Actor) and which data properties to output.</p>\n\n<pre class=\"brush:groovy\">def query = '''<br>\nstart k=node:node_auto_index(name = \"Kevin Bacon\")<br>\nmatch (k)--(m)--(a)--(n)--(b)<br>\nreturn k.name, m.name, a.name, n.name, b.name<br>\n'''<br>\n&nbsp;<br>\n// execute the query<br>\nExecutionEngine engine = new ExecutionEngine(db)<br>\nExecutionResult result = engine.execute(query)<br>\nprintln result</pre><p>\n<i>Listing 10: Constructing and executing a Cypher query</i></p>\n<div><a href=\"http://leanjavaengineering.files.wordpress.com/2013/08/figure8.png\" style=\"font-style: inherit; color: rgb(51, 51, 51);\"><img src=\"http://leanjavaengineering.files.wordpress.com/2013/08/figure8.png?w=500&amp;h=117\" alt=\"Figure 8: Cypher results toString\" width=\"500\" height=\"117\" class=\"size-large wp-image-628\" style=\"margin-top: 2px; max-width: 98.5%;\"></a>\n<p>Figure 8: Cypher results toString</p>\n</div>\n\n<p>The slowest part of the query from Listing 10 is the index lookup to find the starting point for the traversal. This could easily optimized if the use case were to always start with Kevin Bacon, as we could make him the root node of the graph. Adding the relationship directions (e.g.&nbsp;<code>match (k)&lt;--(m)--&gt;(a)&lt;--(n)--&gt;(b)</code>) is also beneficial.</p>\n\n<p>An alternative but less desirable approach is to use the node ID, but this isn’t good practice as the ID is an internal identifier and you should be aware that Node IDs are reused within Neo4j.</p>\n\n<p>The index lookup, in my tests with the small dataset, added ~4ms in comparison to e.g.&nbsp;<code>start k=node(1)</code>.</p>\n\n<p>An alternative way to specify a 2nd degree query (which in our case is 4 hops because the movies are modeled as nodes) is shown in Listing 11. This query is simpler to write and permits variable length hops (as per Listing 12 for 1st and 2nd degree Actors with ordered output in Figure 9), but requires additional work to make sense of the linking movies and actors.</p>\n\n<pre class=\"brush:groovy\">start k=node:node_auto_index(name = \"Kevin Bacon\")<br>\nMATCH p = (k)-[:featured*4..4]-(x)<br>\nRETURN p, x.name</pre><p>\n<i>Listing 11: Match variable-length edges with a hop count</i></p>\n\n<pre class=\"brush:groovy\">start k=node:node_auto_index(name = \"Kevin Bacon\")<br>\nMATCH p = (k)-[:featured*2..4]-(x)<br>\nWHERE x.type = 'Actor'<br>\nRETURN p, x.name<br>\nORDER BY x.name</pre><p>\n<i>Listing 12: Where clause and order by</i></p>\n<div><a href=\"http://leanjavaengineering.files.wordpress.com/2013/08/figure9.png\" style=\"font-style: inherit; color: rgb(51, 51, 51);\"><img src=\"http://leanjavaengineering.files.wordpress.com/2013/08/figure9.png?w=500&amp;h=128\" alt=\"Figure 9: Results with the graph path\" width=\"500\" height=\"128\" class=\"size-large wp-image-629\" style=\"margin-top: 2px; max-width: 98.5%;\"></a>\n<p>Figure 9: Results with the graph path</p>\n</div>\n</h2>\n<h2>Comparison to SQL\n<p>The Cypher graph query in Listing 10 is significantly easier to specify in Cypher that its equivalent SQL query. In a relational database the necessary normalized table structure as shown in Figure 10, introduces a link table to break the many-to-many relationship between movies and actors into two separate one-to-many relationships. i.e. a movie can feature many actors and an actor can appear in many movies. Consequently the equivalent SQL query requires a lot of extra constructs as detailed in Listing 13 and the exclusions are required to prevent Kevin Bacon and first-degree connections appearing in the results, as seen in Figure 11, as second-degree connections.</p>\n<div><a href=\"http://leanjavaengineering.files.wordpress.com/2013/08/figure10.png\" style=\"font-style: inherit; color: rgb(51, 51, 51);\"><img src=\"http://leanjavaengineering.files.wordpress.com/2013/08/figure10.png?w=300&amp;h=237\" alt=\"Figure 10: the Entity Relationship Diagram\" width=\"300\" height=\"237\" class=\"size-medium wp-image-630\" style=\"margin-top: 2px; max-width: 98.5%;\"></a>\n<p>Figure 10: the Entity Relationship Diagram</p>\n</div>\n\n<p>The full DDL and DML for this example are available from the GitHub repository, tested using MySQL.</p>\n\n<pre class=\"brush:sql\">select k.actor_name, m.movie_name, a.actor_name, n.movie_name, b.actor_name<br>\nfrom<br>\n&nbsp;actor k, actor a, actor b,<br>\n&nbsp;movie m, movie n,<br>\n&nbsp;movie_actor mk, movie_actor ma, movie_actor na, movie_actor nb<br>\nwhere<br>\n&nbsp;k.actor_name = 'Kevin Bacon'<br>\nand k.actor_id = mk.actor_id<br>\nand mk.movie_id = m.movie_id<br>\nand ma.movie_id = m.movie_id<br>\nand ma.actor_id = a.actor_id<br>\nand na.actor_id = a.actor_id<br>\nand na.movie_id = n.movie_id<br>\nand nb.movie_id = n.movie_id<br>\nand nb.actor_id = b.actor_id<br>\nand k.actor_id a.actor_id<br>\nand k.actor_id b.actor_id<br>\nand a.actor_id b.actor_id<br>\nand m.movie_id n.movie_id;</pre><br>\n<i>Listing 13: SQL query to retrieve second-degree connections</i></p>\n<div><a href=\"http://leanjavaengineering.files.wordpress.com/2013/08/figure11.png\" style=\"font-style: inherit; color: rgb(51, 51, 51);\"><img src=\"http://leanjavaengineering.files.wordpress.com/2013/08/figure11.png?w=500&amp;h=116\" alt=\"Figure 11: Result set\" width=\"500\" height=\"116\" class=\"size-large wp-image-631\" style=\"margin-top: 2px; max-width: 98.5%;\"></a>\n<p>Figure 11: Result set</p>\n</div>\n\n<p>The response time of the unoptimized SQL query isn’t too bad in this case (the explain plan is shown in Figure 12), but we only have a miniscule data set – if you want to really try this out at scale and at 6 degrees, you can access the full IMDB actors and actresses datasets from&nbsp;<a href=\"http://www.imdb.com/interfaces\" rel=\"nofollow\" style=\"font-style: inherit; color: rgb(51, 51, 51);\">http://www.imdb.com/interfaces</a>, though the data will need pre-processing to get it into a loadable form for either relational or graph databases.</p>\n<div><a href=\"http://leanjavaengineering.files.wordpress.com/2013/08/figure12.png\" style=\"font-style: inherit; color: rgb(51, 51, 51);\"><img src=\"http://leanjavaengineering.files.wordpress.com/2013/08/figure12.png?w=500&amp;h=85\" alt=\"Figure 12: MySQL explain plan\" width=\"500\" height=\"85\" class=\"size-large wp-image-632\" style=\"margin-top: 2px; max-width: 98.5%;\"></a>\n<p>Figure 12: MySQL explain plan</p>\n</div>\n</h2>\n<h1>Further areas of interest</h1>\n<h2>Neo4j Event Handlers\n<p>The&nbsp;<em>org.neo4j.graphDB.event</em>&nbsp;package defines a&nbsp;<code>TransactionEventHandler&lt;T&gt;</code>interface that can be used to trigger custom behavior before or after commits and after a rollback has occurred. This is beyond the scope of this article.</p>\n</h2>\n<h2>Gremlin\n<p>Tinkerpop (<a href=\"http://www.tinkerpop.com/\" rel=\"nofollow\" style=\"font-style: inherit; color: rgb(51, 51, 51);\">http://www.tinkerpop.com</a>) provides a set of Open Source graph projects; Blueprints is a property graph model interface with provided implementations. Databases that implement the Blueprints interfaces automatically support Blueprints-enabled applications.</p>\n\n<p>Tinkerpop also created Gremlin (<a href=\"https://github.com/tinkerpop/gremlin/wiki\" rel=\"nofollow\" style=\"font-style: inherit; color: rgb(51, 51, 51);\">https://github.com/tinkerpop/gremlin/wiki</a>), which is a domain specific language (see&nbsp;<a href=\"http://gremlindocs.com/\" rel=\"nofollow\" style=\"font-style: inherit; color: rgb(51, 51, 51);\">http://gremlindocs.com</a>) for traversing property graphs.</p>\n\n<p>Gremlin provides an interactive shell that utilizes the Groovy Shell and which we’ll now use for an example.</p>\n</h2>\n<h3>GREMLIN EXAMPLE\n<p>The data for this example is available in the companion GitHub repository and is a GraphML representation of the graph in Figure 7, as it is one of the standard formats that Gremlin supports. For this example I used Titan version 0.2.0 (there is a little more information on Titan in the following section).</p>\n\n<p>Listing 14 illustrates an interactive approximate equivalent of the Cypher query in Listing 10.</p>\n\n<pre class=\"brush:groovy\">titan-0.2.0$ bin/gremlin.sh<br>\n&nbsp;<br>\n&nbsp;\\,,,/<br>\n&nbsp;(o o)<br>\n-----oOOo-(_)-oOOo-----<br>\ngremlin&gt;g = TitanFactory.open('/tmp/titan')<br>\n==&gt;titangraph[local:/tmp/titan]<br>\ngremlin&gt;g.createKeyIndex('name', Vertex.class)<br>\n==&gt;null<br>\ngremlin&gt; g.loadGraphML('data/bacon_oracle.xml')<br>\n==&gt;null<br>\ngremlin&gt; kevin = g.V('name','Kevin Bacon').next()<br>\n==&gt;v[4]<br>\ngremlin&gt; kevin.map()<br>\n==&gt;name=Kevin Bacon<br>\n==&gt;type=Actor<br>\ngremlin&gt; kevin.in('featured').map<br>\n==&gt;{name=Footloose, type=Movie}<br>\n==&gt;{name=Wild Things, type=Movie}<br>\ngremlin&gt; kevin.in('featured').out('featured').except([kevin]).name<br>\n==&gt;John Lithgow<br>\n==&gt;Bill Murray<br>\n==&gt;Neve Campbell<br>\ngremlin&gt; kevin.in('featured').out('featured').dedup()<br>\n==&gt;v[4]<br>\n==&gt;v[12]<br>\n==&gt;v[32]<br>\n==&gt;v[40]<br>\ngremlin&gt; kevin.in('featured').out('featured').in('featured').out('featured').except([g.v(4), g.v(12), g.v(32), g.v(40)]).dedup().name<br>\n==&gt;Mike Myers<br>\n==&gt;Cameron Diaz</code><br>\n<i>Listing 14: an interactive Gremlin session</i></p>\n</h3>\n<h2>Alternative graph stores</h2>\n<h3>TITAN\n<p>Aurelius Titan (<a href=\"http://thinkaurelius.github.io/titan/\" rel=\"nofollow\" style=\"font-style: inherit; color: rgb(51, 51, 51);\">http://thinkaurelius.github.io/titan/</a>) provides a choice of persistence backends including Cassandra and HBase. It provides support for search using ElasticSearch or Lucene. Titan leverages Gremlin and the getting started examples make use of the Groovy Gremlin shell.</p>\n</h3>\n<h3>ORIENTDB\n<p>OrientDB (<a href=\"http://www.orientdb.org/\" rel=\"nofollow\" style=\"font-style: inherit; color: rgb(51, 51, 51);\">http://www.orientdb.org</a>) provides a graph + document database with fulltext indices.</p>\n</h3>\n<h2>RDF, Triples/Quads &amp; SPARQL\n<p>RDF (<a href=\"http://www.w3.org/TR/2004/REC-rdf-primer-20040210/\" rel=\"nofollow\" style=\"font-style: inherit; color: rgb(51, 51, 51);\">http://www.w3.org/TR/2004/REC-rdf-primer-20040210/</a>) and SPARQL (<a href=\"http://www.w3.org/TR/rdf-sparql-query/\" rel=\"nofollow\" style=\"font-style: inherit; color: rgb(51, 51, 51);\">http://www.w3.org/TR/rdf-sparql-query/</a>) are two Semantic Web standards from the W3C (World Wide Web Consortium).</p>\n\n<p>RDF (Resource Descriptor Framework) provides a mechanism for describing a resource and there are related standards such as RDF/a for embedding metadata attributes within a document.</p>\n\n<p>An RDF Triple (<a href=\"http://www.w3.org/TR/rdf-concepts/#section-triples\" rel=\"nofollow\" style=\"font-style: inherit; color: rgb(51, 51, 51);\">http://www.w3.org/TR/rdf-concepts/#section-triples</a>) refers to the Subject -Predicate-&gt; Object data structure used to denote for instance that Alice knows Bob. A quad extends this with additional context, also known as a named graph, which can be used for sub-setting a large graph.</p>\n\n<p>SPARQL, the SPARQL Protocol and RDF Query Language, provides a mechanism to query many RDF resources, typically held within a Triple/Quad Store.</p>\n\n<p>The OpenRDF project have produced an interface called RDF SAIL (Storage And Inference Layer) – the Blueprints property graph interface from Tinkerpop enables a&nbsp;<em>GraphSail</em>&nbsp;to be used on top of graph databases such as Neo4j, OrientDB and Titan.</p>\n</h2>\n<h2>Visualizations\n<p>This is quite a big area and is a hot topic, for Neo4j users a GraphViz plugin is available plus the following page makes a good starting point<a href=\"http://www.neo4j.org/develop/visualize\" rel=\"nofollow\" style=\"font-style: inherit; color: rgb(51, 51, 51);\">http://www.neo4j.org/develop/visualize</a></p>\n\n<p><b>Note:</b>&nbsp;the Gephi visualization tool has been tested with Neo4j 1.5, I didn’t have any luck with a 1.7.2 database.</p>\n</h2>\n<h2>Further Reading\n<p>The forthcoming O’Reilly book Graph Databases (<a href=\"http://graphdatabases.com/\" rel=\"nofollow\" style=\"font-style: inherit; color: rgb(51, 51, 51);\">http://graphdatabases.com</a>) goes into depth on the subject with a focus on Neo4j.</p>\n</h2>\n<h1><i></i></h1>\n<h1>Credits\n<p>Listing 5 is derived from work by Paul King (<a href=\"https://twitter.com/paulk_asert\" rel=\"nofollow\" style=\"font-style: inherit; color: rgb(51, 51, 51);\">https://twitter.com/paulk_asert</a>) published in the public domain at<a href=\"http://groovyconsole.appspot.com/script/245001\" rel=\"nofollow\" style=\"font-style: inherit; color: rgb(51, 51, 51);\">http://groovyconsole.appspot.com/script/245001</a>.</p>\n</h1>",
+			"settings":
+			{
+				"buffer_size": 29469,
+				"line_ending": "Unix",
+				"name": "<p><i>This article provides a practical introducti"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"web",
+				"Web Inspector"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"O",
+				"Sort Lines"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Snippet: #!/usr/bin/env"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/james.sugrue/Downloads/jquery-1.10.2.min.map",
+		"/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/widgets/template.homeCityNewUser/controllers/widget.js",
+		"/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/widgets/card.homeCity/widget.json",
+		"/Applications/XAMPP/xamppfiles/htdocs/backbone/chapter6/js/app/app.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/backbone/chapter6/stage1.html",
+		"/Users/james.sugrue/Backbone/twitter/server.js",
+		"/Users/james.sugrue/Backbone/twitter/lib/twitter.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/backbone/chapter6/js/app/view/AppView.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/backbone/chapter6/js/app/router/AppRouter.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/backbone/chapter6/js/app/view/TimelineView.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/backbone/chapter6/js/app/model/Tweet.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/backbone/chapter6/js/app/collection/Timeline.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/backbone/chapter6/index.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/backbone/chapter6/css/style.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/backbone/chapter4/index.html",
+		"/Users/james.sugrue/Backbone/twitter/one.js",
+		"/Users/james.sugrue/Backbone/TwitterJSClient-master/lib/Twitter.js",
+		"/Users/james.sugrue/Backbone/server/server.js",
+		"/Users/james.sugrue/Backbone/TwitterJSClient-master/index.js",
+		"/Users/james.sugrue/Backbone/TwitterJSClient-master/test/spec/TwitterITSpec.js",
+		"/Users/james.sugrue/Documents/workspace/rtr-mobile-web/grails-app/views/layouts/includes/_script.gsp",
+		"/Users/james.sugrue/Documents/workspace/rtr-mobile-web-resources/src/js/external/jquery.tappable.js",
+		"/Users/james.sugrue/Documents/workspace/rtr-mobile-web-resources/src/js/external/Cornwall.js",
+		"/Users/james.sugrue/Documents/CarmaOne/Carma One/app/config.json",
+		"/Users/james.sugrue/Documents/CarmaOne/CarmaServer/server.js",
+		"/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/lib/styles.js",
+		"/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/lib/image.js",
+		"/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/lib/deck.js",
+		"/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/lib/controller.js",
+		"/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/controllers/index.js",
+		"/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/controllers/login.js",
+		"/Users/james.sugrue/Documents/CarmaOne/Carma One/Resources/alloy/widget.js",
+		"/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/lib/zipcheck.js",
+		"/Users/james.sugrue/Documents/workspace/rtr-mobile-web-resources/src/js/utils/NativeAppConnector.js",
+		"/Users/james.sugrue/Documents/workspace/rtr-mobile-web-resources/build/js/utils/AppSettings.js",
+		"/Users/james.sugrue/Documents/workspace/rtr-mobile-web/grails-app/views/layouts/appjs/_app-actionscreen.gsp",
+		"/Users/james.sugrue/Documents/workspace/rtr-mobile-web/grails-app/views/layouts/rtr-mobile-web-main.gsp",
+		"/Users/james.sugrue/Documents/workspace/rtr-mobile-web-resources/build/js/app.js",
+		"/Users/james.sugrue/Documents/workspace/rtr-mobile-web/target/classes/rtrboard/login.gsp",
+		"/Users/james.sugrue/Documents/workspace/rtr-mobile-web-resources/src/js/views/ActionScreenView.js",
+		"/Users/james.sugrue/Documents/workspace/rtr-mobile-web-resources/src/js/views/GroupCreationView.js",
+		"/Users/james.sugrue/Documents/workspace/rtr-mobile-web/web-app/js/application.js",
+		"/Users/james.sugrue/Documents/workspace/rtr-mobile-web/grails-app/views/index.gsp",
+		"/Users/james.sugrue/Documents/workspace/rtr-mobile-web/grails-app/views/rtrboard/login.gsp",
+		"/Users/james.sugrue/Documents/workspace/rtr-common-web-resources/src/js/models/LastLocation.js",
+		"/Users/james.sugrue/Documents/workspace/rtr-mobile-web-resources/src/js/app.js",
+		"/Users/james.sugrue/Documents/workspace/rtr-mobile-web/grails-app/controllers/com/avego/rtr/mobile/web/RtrboardController.groovy",
+		"/Users/james.sugrue/Documents/workspace/rtr-mobile-web/grails-app/views/layouts/appjs/_app-login.gsp",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/routers/FindARideRouter.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/views/PrefNotificationsView.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-vride-webapp/grails-app/views/preferences/index.gsp",
+		"/Users/james.sugrue/Documents/workspace/vanpool-vride-webapp/grails-app/i18n/messages.properties",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/views/SelectMembersView.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/views/TripRecordingView.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-vride-webapp/grails-app/views/dashboard/index.gsp",
+		"/Users/james.sugrue/Documents/workspace/vanpool-vride-webapp/web-app/css/css.css",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/views/SelectMembersDialog.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/resources/wro.xml",
+		"/Users/james.sugrue/Documents/workspace/vanpool-vride-webapp/grails-app/views/global_includes/_select_members.gsp",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/views/TripRecordingDetailView.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/utils/handlbarsHelpers.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/css/vanpool.css",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/models/Pool.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/views/MyPoolsView.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/views/mobile/OdometerView.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/views/MyPoolsSummaryView.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/views/CreatePoolDialog.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-vride-webapp/grails-app/views/layouts/includes/_script.gsp",
+		"/Users/james.sugrue/Documents/workspace/vanpool-vride-webapp/grails-app/views/global_includes/_pool_actions.gsp",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/views/CreatePoolView.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-mobile-vride-webapp/grails-app/i18n/messages.properties",
+		"/Users/james.sugrue/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/utils/BrowserCheck.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-auth/grails-app/controllers/com/avego/auth/common/EntryController.groovy",
+		"/Users/james.sugrue/Documents/workspace/vanpool-vride-webapp/grails-app/views/entry/index.gsp",
+		"/Users/james.sugrue/Documents/workspace/vanpool-auth/grails-app/controllers/com/avego/auth/common/CorsproxyController.groovy",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/app-mobile.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-vride-webapp/grails-app/views/session/config.gsp",
+		"/Users/james.sugrue/Documents/workspace/vanpool-mobile-vride-webapp/grails-app/views/session/config.gsp",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/app.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-vride-webapp/grails-app/views/pools/index.gsp",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/views/MyPoolEditRoutesView.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/models/PoolRoute.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-mobile-vride-webapp/grails-app/views/layouts/includes/_script.gsp",
+		"/Users/james.sugrue/Documents/workspace/vanpool-vride-webapp/grails-app/conf/Config.groovy",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/views/PoolSearchView.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-vride-webapp/grails-app/views/global_includes/_findaride_form.gsp",
+		"/Users/james.sugrue/Documents/workspace/vanpool-vride-webapp/grails-app/views/pools/includes/_route.gsp",
+		"/Users/james.sugrue/Documents/workspace/vanpool-vride-webapp/grails-app/views/pools/includes/_extrastop.gsp",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/widgets/MobileMessagePopup.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-vride-webapp/application.properties",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/views/PoolSummaryView.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/views/mobile/MyPoolsView.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/models/CorsProxy.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-vride-webapp/target/classes/application.properties",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/models/CreatePool.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-mobile-vride-webapp/web-app/css/vride-skin.css",
+		"/Users/james.sugrue/Documents/workspace/vanpool-mobile-vride-webapp/grails-app/views/nav/pools.gsp",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/css/vanpool-mobile.css",
+		"/Users/james.sugrue/Documents/workspace/vanpool-mobile-vride-webapp/grails-app/conf/Config.groovy",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/views/mobile/TripView.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-mobile-vride-webapp/grails-app/conf/BuildConfig.groovy",
+		"/Users/james.sugrue/Documents/workspace/vanpool-mobile-vride-webapp/grails-app/views/layouts/includes/_css.gsp",
+		"/Users/james.sugrue/Documents/workspace/vanpool-vride-webapp/grails-app/views/layouts/includes/_css.gsp",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/routers/mobile/HomeRouter.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/views/mobile/CoreMenuView.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-mobile-vride-webapp/grails-app/views/layouts/includes/_coremenu.gsp",
+		"/Users/james.sugrue/Documents/workspace/js-utils/src/main/webapp/js/views/SpinnerView.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/views/ActivityView.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-vride-webapp/working_vanpool-vride-config.properties",
+		"/Users/james.sugrue/Documents/workspace/vanpool-vride-webapp/vanpool-vride-config.properties",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources/src/main/webapp/js/views/MyPoolStatViewingsView.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources-1.60.x/src/main/webapp/js/views/MyPoolEditRoutesDialog.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-mobile-vride-webapp/vanpool-mobile-vride-config.properties",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources-1.60.x/src/main/webapp/js/collections/ErhHistoryList.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources-1.60.x/src/main/webapp/js/views/UserProfileView.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources-1.60.x/src/main/webapp/js/utils/MyProfile.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources-1.60.x/src/main/webapp/js/models/User.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources-1.60.x/src/main/webapp/js/routers/FindARideRouter.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources-1.60.x/src/main/webapp/css/jquery-ui/jquery.tagit.css",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources-1.60.x/src/main/webapp/js/app-mobile.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-vride-webapp/grails-app/conf/com/avego/vanpool/web/filters/AuthFilters.groovy",
+		"/Users/james.sugrue/Documents/workspace/vanpool-mobile-vride-webapp/web-app/js/handlebars/trip-view-template.handlebars",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources-1.60.x/src/main/webapp/js/app.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-mobile-vride-webapp/grails-app/conf/UrlMappings.groovy",
+		"/Users/james.sugrue/Documents/workspace/vanpool-vride-webapp/grails-app/views/entry/errornocookie.gsp",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources-1.60.x/src/main/webapp/js/views/MyPoolsView.js",
+		"/Users/james.sugrue/Documents/workspace/vanpool-webapp-resources-1.60.x/src/main/webapp/js/views/MyPoolsSummaryView.js"
+	],
+	"find":
+	{
+		"height": 111.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app",
+			"",
+			"vanpool/",
+			"",
+			"*.groovy",
+			"*.gsp",
+			"",
+			"*.css",
+			"",
+			"/Users/james.sugrue/Documents/workspace/vanpool-vride-webapp/web-app/js",
+			"<open folders>",
+			"/Users/james.sugrue/Documents/workspace/vanpool-vride-webapp"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"<p><code>",
+			"showLoca",
+			"showWeb",
+			"();\n",
+			"showWeb",
+			"showWebView",
+			" ",
+			"[INFO] :   ",
+			"injectLocation",
+			"beforeloading",
+			"error loading",
+			"alert",
+			"showWebvi",
+			"\"/>",
+			"setImage",
+			"fetch",
+			"BIO",
+			"\"",
+			".require",
+			"  oauth/request_token\n",
+			"name",
+			"fetchRequest",
+			"zipcheck",
+			"</code></pre>",
+			"<pre><code>",
+			"fastclick",
+			"\n	",
+			"app.js",
+			"app-login",
+			"about to fire",
+			"alert(",
+			"alert(\"BAM",
+			"alert(",
+			"alert",
+			"alert('BAM",
+			"BAM",
+			"AppSettings",
+			"app.js",
+			"avego.rtr.utils.NativeAppConnector",
+			"app:raw.location.update",
+			"trip = ",
+			"spinner",
+			"ui-spinner",
+			"getLocation",
+			".lat",
+			"4",
+			"pref-notif-view-template",
+			"#pref-notif-view-template",
+			"notify_pools_interrested",
+			"preferences-notifi",
+			"section-preference",
+			"save",
+			"trip-record",
+			"trip-recorde",
+			".miles",
+			"miles",
+			".miles",
+			"miles",
+			"spinner",
+			".trigger",
+			"updateMem",
+			"_saved",
+			"defaultDistance",
+			"resetView",
+			"reserView",
+			"_markTripMember",
+			"create-pool-view-template",
+			"-view-template\"",
+			"create-pool-dialog-container",
+			"_createPoolPopup",
+			"_openCreatePool",
+			"_createPoolPopup",
+			"outstanding-tasks",
+			"{{else}}",
+			"pool-details-actions-btns",
+			"pool_route_details",
+			"pool-details-actions",
+			"upgradewarning",
+			"Browser",
+			"left-col",
+			"pool-details-actions",
+			"pool-details-column-left",
+			".pools-accordion-body .pool-details-actions .pool-details-actions-lead",
+			"Register",
+			"Your Account Has Been Created",
+			"confirm",
+			"creationDate",
+			"both",
+			"recording",
+			"hideTripRecording",
+			"tripRecord",
+			"hideDTR",
+			"vp3",
+			"getnative",
+			"apcors",
+			"</code></p>",
+			"<p><code>",
+			"apiap",
+			"apcorsproxy",
+			"getNativeLocation",
+			"isNativeLocationOnly",
+			"avego.enableNativeLocation",
+			"useNativeLocation",
+			"gps.native",
+			"messages.properties",
+			"messages.js",
+			"error-search-txt-from",
+			"  var validator = avego.util.TextValidator,\nPoolStop",
+			"routeStopList",
+			"routeStop",
+			">>",
+			"_route",
+			"_route.gsp",
+			"form-container route-container",
+			"stopLon",
+			"validat",
+			"validate",
+			".pools-accordion-body",
+			"Trip",
+			"tripRecord",
+			"sn.splogo.url",
+			"appPaths.login",
+			"app.path.login",
+			" app.path.login",
+			"session/login",
+			"useNativeLocation",
+			"nativeLocation",
+			"corsproxyEnabled"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"<pre class=\"brush:groovy\">",
+			"",
+			"'",
+			"</pre>",
+			"<pre class=\"brush:java\">",
+			"</pre>",
+			"<pre class=\"brush:groovy\">",
+			"</pre>",
+			"<pre class=\"brush:java\">",
+			"<pre class=\"brush:xml\">",
+			"vanpool/",
+			"${grailsApplication.config.libs.vanpool.version}",
+			"${grailsApplication.config.libs.jsutils.version}",
+			"vanpool/",
+			"vride",
+			"<pre class=\"brush:java\"",
+			"2.1.11"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 7,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"settings":
+					{
+						"buffer_size": 1,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1,
+								1
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_name": "s",
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"is_xml": false,
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"settings":
+					{
+						"buffer_size": 5232,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										164,
+										172
+									],
+									[
+										308,
+										316
+									],
+									[
+										619,
+										627
+									],
+									[
+										884,
+										892
+									],
+									[
+										1014,
+										1022
+									],
+									[
+										1313,
+										1318
+									],
+									[
+										1588,
+										1593
+									],
+									[
+										1831,
+										1836
+									],
+									[
+										2068,
+										2073
+									],
+									[
+										2326,
+										2331
+									],
+									[
+										2562,
+										2567
+									],
+									[
+										2765,
+										2770
+									],
+									[
+										3072,
+										3077
+									],
+									[
+										3156,
+										3161
+									],
+									[
+										3423,
+										3428
+									],
+									[
+										3589,
+										3594
+									],
+									[
+										3815,
+										3820
+									],
+									[
+										4258,
+										4271
+									],
+									[
+										4516,
+										4530
+									],
+									[
+										4617,
+										4631
+									],
+									[
+										4822,
+										4836
+									],
+									[
+										5089,
+										5103
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								4607,
+								4607
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"detect_indentation": false,
+							"output_tag": 5,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2040.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/widgets/template.webView/controllers/widget.js",
+					"settings":
+					{
+						"buffer_size": 3046,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1639,
+								1639
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"sublime_auto_complete": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 214.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/lib/image.js",
+					"settings":
+					{
+						"buffer_size": 2665,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2203,
+								2203
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"sublime_auto_complete": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 514.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/widgets/card.staticMap/controllers/widget.js",
+					"settings":
+					{
+						"buffer_size": 7531,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6306,
+								6306
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"sublime_auto_complete": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3970.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/widgets/card.staticMap/views/widget.xml",
+					"settings":
+					{
+						"buffer_size": 1236,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								787,
+								787
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"is_xml": true,
+							"sublime_auto_complete": true,
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/james.sugrue/Documents/workspace/rtr-trigger-card-prototype/app/widgets/card.staticMap/styles/widget.tss",
+					"settings":
+					{
+						"buffer_size": 1149,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								422,
+								422
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"settings":
+					{
+						"buffer_size": 29469,
+						"regions":
+						{
+							"TagLint":
+							{
+								"flags": 52,
+								"icon": "dot",
+								"regions":
+								[
+									[
+										24914,
+										24940
+									]
+								],
+								"scope": "variable.parameter"
+							}
+						},
+						"selection":
+						[
+							[
+								21748,
+								21752
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_name": "<p><i>This article provides a practical introducti",
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"is_xml": false,
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 4728.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"widget.js",
+				"app/widgets/card.staticMap/controllers/widget.js"
+			],
+			[
+				"widget",
+				"app/widgets/card.homeCity/widget.json"
+			],
+			[
+				"image.",
+				"app/lib/image.js"
+			],
+			[
+				"app.",
+				"chapter6/js/app/app.js"
+			],
+			[
+				"server.",
+				"twitter/server.js"
+			],
+			[
+				"style",
+				"chapter6/css/style.css"
+			],
+			[
+				"widg",
+				"Carma One/Resources/alloy/widget.js"
+			],
+			[
+				"jquery",
+				"rtr-mobile-web-resources/src/js/external/jquery.tappable.js"
+			],
+			[
+				"_scrip",
+				"rtr-mobile-web/grails-app/views/layouts/includes/_script.gsp"
+			],
+			[
+				"appsettings",
+				"rtr-mobile-web-resources/build/js/utils/AppSettings.js"
+			],
+			[
+				"native",
+				"rtr-mobile-web-resources/src/js/utils/NativeAppConnector.js"
+			],
+			[
+				"lastloc",
+				"rtr-common-web-resources/src/js/models/LastLocation.js"
+			],
+			[
+				"odom",
+				"vanpool-webapp-resources/src/main/webapp/js/models/OdometerReading.js"
+			],
+			[
+				"index",
+				"vanpool-vride-webapp/grails-app/views/dashboard/index.gsp"
+			],
+			[
+				"triprecv",
+				"vanpool-webapp-resources/src/main/webapp/js/views/TripRecordingView.js"
+			],
+			[
+				"triprecord",
+				"vanpool-webapp-resources/src/main/webapp/js/views/TripRecordingDetailView.js"
+			],
+			[
+				"vanpool.css",
+				"vanpool-webapp-resources/src/main/webapp/css/vanpool.css"
+			],
+			[
+				"selectm",
+				"vanpool-webapp-resources/src/main/webapp/js/views/SelectMembersView.js"
+			],
+			[
+				"_sec",
+				"vanpool-vride-webapp/grails-app/views/global_includes/_select_members.gsp"
+			],
+			[
+				"css.cs",
+				"vanpool-vride-webapp/web-app/css/css.css"
+			],
+			[
+				"selectmem",
+				"vanpool-webapp-resources/src/main/webapp/js/views/SelectMembersView.js"
+			],
+			[
+				"triprecr",
+				"vanpool-webapp-resources/src/main/webapp/js/views/TripRecordingView.js"
+			],
+			[
+				"sele",
+				"vanpool-webapp-resources/src/main/webapp/js/views/SelectMembersView.js"
+			],
+			[
+				"message",
+				"vanpool-vride-webapp/grails-app/i18n/messages.properties"
+			],
+			[
+				"tripreco",
+				"vanpool-webapp-resources/src/main/webapp/js/views/TripRecordingView.js"
+			],
+			[
+				"mypoolsview",
+				"vanpool-webapp-resources/src/main/webapp/js/views/MyPoolsView.js"
+			],
+			[
+				"pool.js",
+				"vanpool-webapp-resources/src/main/webapp/js/models/Pool.js"
+			],
+			[
+				"handle",
+				"vanpool-webapp-resources/src/main/webapp/js/utils/handlbarsHelpers.js"
+			],
+			[
+				"create",
+				"vanpool-webapp-resources/src/main/webapp/js/views/CreatePoolDialog.js"
+			],
+			[
+				"selec",
+				"vanpool-webapp-resources/src/main/webapp/js/views/SelectMembersDialog.js"
+			],
+			[
+				"wro",
+				"vanpool-webapp-resources/src/main/resources/wro.xml"
+			],
+			[
+				"_script",
+				"vanpool-vride-webapp/grails-app/views/layouts/includes/_script.gsp"
+			],
+			[
+				"createpoolview",
+				"vanpool-webapp-resources/src/main/webapp/js/views/CreatePoolView.js"
+			],
+			[
+				"creatpool",
+				"vanpool-webapp-resources/src/main/webapp/js/views/CreatePoolDialog.js"
+			],
+			[
+				"inde",
+				"vanpool-vride-webapp/grails-app/views/dashboard/index.gsp"
+			],
+			[
+				"browser",
+				"vanpool-webapp-resources/src/main/webapp/js/utils/BrowserCheck.js"
+			],
+			[
+				"css",
+				"vanpool-vride-webapp/web-app/css/css.css"
+			],
+			[
+				"corspr",
+				"vanpool-auth/grails-app/controllers/com/avego/auth/common/CorsproxyController.groovy"
+			],
+			[
+				"entr",
+				"vanpool-auth/grails-app/controllers/com/avego/auth/common/EntryController.groovy"
+			],
+			[
+				"css.",
+				"vanpool-vride-webapp/web-app/css/css.css"
+			],
+			[
+				"index.gsp",
+				"vanpool-vride-webapp/grails-app/views/pools/index.gsp"
+			],
+			[
+				"app-mob",
+				"vanpool-webapp-resources/src/main/webapp/js/app-mobile.js"
+			],
+			[
+				"messages",
+				"vanpool-vride-webapp/grails-app/i18n/messages.properties"
+			],
+			[
+				"mobilemess",
+				"vanpool-webapp-resources/src/main/webapp/js/widgets/MobileMessagePopup.js"
+			],
+			[
+				"poolrou",
+				"vanpool-webapp-resources/src/main/webapp/js/models/PoolRoute.js"
+			],
+			[
+				"editroutes",
+				"vanpool-webapp-resources/src/main/webapp/js/views/MyPoolEditRoutesView.js"
+			],
+			[
+				"mypoolsumm",
+				"vanpool-webapp-resources/src/main/webapp/js/views/MyPoolsSummaryView.js"
+			],
+			[
+				"poolsummary",
+				"vanpool-webapp-resources/src/main/webapp/js/views/PoolSummaryView.js"
+			],
+			[
+				"config",
+				"vanpool-vride-webapp/grails-app/views/session/config.gsp"
+			],
+			[
+				"appli",
+				"vanpool-vride-webapp/application.properties"
+			],
+			[
+				"createpoo",
+				"vanpool-webapp-resources/src/main/webapp/js/models/CreatePool.js"
+			],
+			[
+				"cor",
+				"vanpool-auth/grails-app/controllers/com/avego/auth/common/CorsproxyController.groovy"
+			],
+			[
+				"corspro",
+				"vanpool-webapp-resources/src/main/webapp/js/models/CorsProxy.js"
+			],
+			[
+				"poolvie",
+				"vanpool-webapp-resources/src/main/webapp/js/views/mobile/MyPoolsView.js"
+			],
+			[
+				"extra",
+				"vanpool-vride-webapp/grails-app/views/pools/includes/_extrastop.gsp"
+			],
+			[
+				"vanpool-mobil",
+				"vanpool-webapp-resources/src/main/webapp/css/vanpool-mobile.css"
+			],
+			[
+				"pools.gs",
+				"vanpool-mobile-vride-webapp/grails-app/views/nav/pools.gsp"
+			],
+			[
+				"vride-skin",
+				"vanpool-mobile-vride-webapp/web-app/css/vride-skin.css"
+			],
+			[
+				"_css",
+				"vanpool-vride-webapp/grails-app/views/layouts/includes/_css.gsp"
+			],
+			[
+				"pool",
+				"vanpool-mobile-vride-webapp/grails-app/views/nav/pools.gsp"
+			],
+			[
+				"corem",
+				"vanpool-mobile-vride-webapp/grails-app/views/layouts/includes/_coremenu.gsp"
+			],
+			[
+				"coremen",
+				"vanpool-webapp-resources/src/main/webapp/js/views/mobile/CoreMenuView.js"
+			],
+			[
+				"odometer",
+				"vanpool-webapp-resources/src/main/webapp/js/views/mobile/OdometerView.js"
+			],
+			[
+				"_config",
+				"vanpool-vride-webapp/working_vanpool-vride-config.properties"
+			],
+			[
+				"summaryvi",
+				"vanpool-webapp-resources/src/main/webapp/js/views/PoolSummaryView.js"
+			],
+			[
+				"statv",
+				"vanpool-webapp-resources/src/main/webapp/js/views/MyPoolStatViewingsView.js"
+			],
+			[
+				"app.js",
+				"vanpool-webapp-resources/src/main/webapp/js/app.js"
+			],
+			[
+				"activity",
+				"vanpool-webapp-resources/src/main/webapp/js/views/ActivityView.js"
+			],
+			[
+				"user",
+				"vanpool-webapp-resources-1.60.x/src/main/webapp/js/models/User.js"
+			],
+			[
+				"mypro",
+				"vanpool-webapp-resources-1.60.x/src/main/webapp/js/utils/MyProfile.js"
+			],
+			[
+				"userprofi",
+				"vanpool-webapp-resources-1.60.x/src/main/webapp/js/views/UserProfileView.js"
+			],
+			[
+				"",
+				"vanpool-webapp-resources-1.60.x/src/main/webapp/js/collections/ErhHistoryList.js"
+			],
+			[
+				"csss",
+				"vanpool-vride-webapp/web-app/css/css.css"
+			],
+			[
+				"vanpool-vride-mobil",
+				"vanpool-mobile-vride-webapp/vanpool-mobile-vride-config.properties"
+			],
+			[
+				"vanpool-v",
+				"vanpool-vride-webapp/vanpool-vride-config.properties"
+			],
+			[
+				"config.gsp",
+				"vanpool-vride-webapp/grails-app/views/session/config.gsp"
+			],
+			[
+				"vanpool-",
+				"vanpool-vride-webapp/vanpool-vride-config.properties"
+			],
+			[
+				"trip-",
+				"vanpool-mobile-vride-webapp/web-app/js/handlebars/trip-view-template.handlebars"
+			],
+			[
+				"confirmval",
+				"vanpool-webapp-resources-1.60.x/src/main/webapp/js/models/ConfirmValidation.js"
+			],
+			[
+				"createpo",
+				"vanpool-webapp-resources-1.60.x/src/main/webapp/js/views/CreatePoolDialog.js"
+			],
+			[
+				"mypoolsvie",
+				"vanpool-webapp-resources-1.60.x/src/main/webapp/js/views/MyPoolsView.js"
+			],
+			[
+				"vanpool.",
+				"vanpool-webapp-resources-1.60.x/src/main/webapp/css/vanpool.css"
+			],
+			[
+				"trip-view",
+				"vanpool-mobile-vride-webapp/web-app/js/handlebars/trip-view-template.handlebars"
+			],
+			[
+				"pools.",
+				"vanpool-mobile-vride-webapp/grails-app/views/nav/pools.gsp"
+			],
+			[
+				"mypool",
+				"vanpool-webapp-resources-1.60.x/src/main/webapp/js/views/mobile/MyPoolsView.js"
+			],
+			[
+				"composem",
+				"vanpool-webapp-resources-1.60.x/src/main/webapp/js/views/mobile/ComposeMessageView.js"
+			],
+			[
+				"find_",
+				"vanpool-vride-webapp/grails-app/views/global_includes/_findaride_form.gsp"
+			],
+			[
+				"session",
+				"vanpool-vride-webapp/grails-app/views/layouts/vanpool-insession.gsp"
+			],
+			[
+				"_rout",
+				"vanpool-vride-webapp/grails-app/views/pools/includes/_route.gsp"
+			],
+			[
+				"_route",
+				"vanpool-vride-webapp/grails-app/views/pools/includes/_route.gsp"
+			],
+			[
+				"insess",
+				"vanpool-vride-webapp/grails-app/views/layouts/vanpool-insession.gsp"
+			],
+			[
+				"handl",
+				"vanpool-webapp-resources-1.60.x/src/main/webapp/js/utils/handlbarsHelpers.js"
+			],
+			[
+				"messages.properties",
+				"vanpool-webapp/grails-app/i18n/messages_sv.properties"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 215.0,
+	"status_bar_visible": true
+}

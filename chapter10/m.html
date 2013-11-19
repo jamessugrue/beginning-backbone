@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Beginning Backbone Twitter Example</title>
+     <link rel='stylesheet' href='css/modern.css'>
+     <link rel="stylesheet" href="css/style.css">
+</head>
+<body class='metrouicss'>
+
+
+
+
+
+<!-- Template for entire app-->
+<script type="text/template" id="app-layout-template">
+<div id="app" class="grid">
+        <div class="row">
+            <div class="span8">
+                
+                <div id='timeline' class='timeline-view'>
+                 <h2>My Tweets</h2>
+                 <div id="timeline-area">
+                    <ul id='timeline-list' class='listview fluid'>
+                    </ul> 
+                  </div>
+              </div>
+            </div>
+
+            <div class="span4" id="side">
+                <div id="profile" class="profile-view">
+                </div>
+
+                  <div id="search" class="search-view">
+                    <form>
+                          <div class="input-control text">
+                               <input type="text" id="searchbox" autofocus="" placeholder="I'm looking for..">
+                            </div>
+                              <button class="bg-color-blue" id="searchbutton">Search</button>
+                    </form>
+                  </div>
+              </div>
+        </div>
+    </div>
+</script>
+
+<!-- Template for profile -->
+<script type="text/x-handlebars-template" id="profile-template">
+ <div class='tiles clearfix'>
+    <div class="tile double bg-color-orangeDark">
+      <div class="tile-content">
+          <img src="{{user.profile_image_url}}" class="place-left">
+          <h3 style="margin-bottom: 5px;">{{user.name}}</h3>
+          <p>{{user.description}}</p>
+          <div class="brand">
+              <div class="badge">{{user.followers_count}} Followers</div>
+          </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+<!-- Template for timeline -->
+
+<script type="text/x-handlebars-template" id="timeline-item-template">
+         <div class='icon'>
+          		<img src='{{user.profile_image_url}}'></img>
+		    </div>
+            <div class='data'>
+                <h4>{{user.name}}</h4>
+                
+                <p>{{format text}}</p>
+                <p class="timestamp"><i>{{friendlyDate}}</i></p>
+            </div>
+ </script>
+
+
+<script type="text/x-handlebars-template" id="timeline-template">
+  <ul id='timeline-list' class='listview fluid'>
+  </ul>  
+ </script>
+
+
+
+
+<script type="text/x-handlebars-template" id="old-timeline-template">
+ <ul class='listview fluid'>
+        {{#each tweet}}
+      <li>
+          <div class='icon'>
+              <img src='{{user.profile_image_url}}'></img>
+        </div>
+            <div class='data'>
+                <h4>{{user.name}}</h4>
+                
+                <p>{{format text}}</p>
+                <p class="timestamp"><i>{{friendlyDate}}</i></p>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+ </script>
+
+
+
+<!-- General Includes -->
+<script src="js/external/jquery-1.10.2.js"></script>
+<script src="js/external/underscore.js"></script>
+<script src="js/external/backbone.js"></script>
+<script src="js/external/handlebars.js"></script>
+<script src="js/external/moment.js"></script>
+<script src="js/external/dialog.js"></script>
+<script src="js/external/backbone.marionette.js"></script>
+
+<!-- Model -->
+<script src="js/app/model/Tweet.js"></script>
+<script src="js/app/model/Profile.js"></script>
+<script src="js/app/model/Search.js"></script>
+<!-- Collections -->
+<script src="js/app/collection/Timeline.js"></script>
+<!-- View -->
+<script src="js/app/view/TimelineItemView.js"></script>
+<script src="js/app/view/MarionetteTimelineView.js"></script>
+<script src="js/app/view/MarionetteCompositeTimelineView.js"></script>
+<script src="js/app/view/MarionetteProfileView.js"></script>
+
+<script src="js/app/view/ProfilePopupView.js"></script>
+<script src="js/app/view/SearchView.js"></script>
+<script src="js/app/view/ResultsView.js"></script>
+
+<!-- Router -->
+<script src="js/app/router/AppRouter.js"></script>
+<!-- Util --> 
+<script src="js/app/util/Helpers.js"></script>
+
+<!-- The 'main' for this app -->
+<script src="js/marionette/app.js"></script> 
+
+</body>
+</html>

@@ -1,0 +1,580 @@
+a.button {
+  position:relative;
+  height:28px;
+  font-size:14px;
+  font-family:Helvetica;
+  color:#333;
+  border:1px solid #666;
+  line-height:30px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  background-color:#eee;
+
+  /* inline-block with IE7 hack */
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align:top;
+  text-decoration:none;
+}
+
+.button .label {
+  line-height:28px;
+  padding:0;
+}
+
+.button.has_border .label {
+  padding:0 5px;
+}
+
+.button.disabled {
+  color:#aaa;
+}
+
+.button.has_border.disabled {
+  border-color:#999;
+}
+
+.button.has_border:hover {
+  background-color:#ddd;
+  border-color:#222;
+}
+
+.button.has_border.disabled:hover {
+  background-color:#fff;
+  border-color:#999;
+  cursor:default;
+}
+
+.button.has_border.active {
+  background-color:#ccc;
+}
+
+.button input[type=submit] {
+  border:1px solid transparent;
+  background-color:transparent;
+  position:absolute;
+  top:-5px;
+  right:-5px;
+  bottom:-5px;
+  left:-5px;
+  cursor:pointer;
+}
+.calendar {
+  user-select: none;
+  -webkit-user-select: none;
+  text-transform:capitalize;
+}
+
+.calendar table {
+  border-collapse:collapse;
+  border:1px solid #444;
+}
+
+.calendar thead {
+  border-bottom:1px solid #444;
+  line-height:33px;
+  background-color:#eaeaea;
+}
+
+.calendar .go_forward,
+.calendar .title {
+  border-left:1px solid #444;
+}
+
+.calendar a {
+  display:block;
+  text-decoration:none;
+  color:#222;
+}
+
+.calendar td,
+.calendar th {
+  text-align:center;
+  padding:0;
+  margin:0;
+  font-size:14px;
+}
+
+.calendar .row.days td {
+  line-height:33px;
+  border-right:1px solid #444;
+  background-color:#eaeaea;
+}
+
+.calendar .cell {
+  border:1px solid #444;
+  background-color:#fff;
+}
+
+.calendar .cell.inactive {
+  background-color:#eaeaea;
+  color:#999;
+}
+
+.calendar .cell.today {
+  font-weight:bold;
+}
+
+.calendar .cell a,
+.calendar .cell .day {
+  width:33px;
+  line-height:33px;
+}
+
+.calendar .cell a:hover,
+.calendar .cell a:active {
+  background-color:#e9d4c7;
+}
+
+.calendar .cell.selected a, 
+.calendar .cell.selected a:hover {
+  background-color:#ae5317;
+  color:#fff;
+}
+
+.checkbox {
+  text-decoration:none;
+  height:30px;
+  white-space:nowrap;
+}
+
+.checkbox:hover {
+  cursor:pointer;
+}
+
+.checkbox .checkmark {
+  position:relative;
+  width:20px;
+  height:20px;
+  margin-top:5px;
+  text-align:center;
+  border:1px solid #666;
+  color:#222;
+  font-size:18px;
+  background-color:#fff;
+}
+
+.checkbox:hover .checkmark {
+  background-color:#eee;
+  border-color:#222;
+}
+
+.checkbox .checkmark_fill {
+  height:14px;
+  width:14px;
+  line-height:16px;
+  position:absolute;
+  background-color:#222;
+  top:3px;
+  left:3px;
+}
+
+.checkbox .label {
+  line-height:32px;
+  padding:0 0 0 10px;
+  text-decoration:none;
+  color:#222;
+  overflow:hidden;
+}
+
+.checkbox,
+.checkbox .checkmark,
+.checkbox .label {
+  /* inline-block with IE7 hack */
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align:top;
+}
+.date_picker .text_field {
+  width:100px;
+}
+
+.date_picker_calendar {
+  position:absolute;
+  z-index:1000;
+}
+.link {
+  position:relative;
+  /* inline-block with IE7 hack */
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align:middle;
+  line-height:30px;
+}.list ul {
+  list-style-type:none;
+  margin:0;
+  padding:0;
+}
+.menu {
+  max-height:150px;
+  margin-right:3px;
+}
+
+.menu ul {
+  padding:5px;
+}
+
+.menu .menu_scroller {
+  border:1px solid #666;
+  background-color:#fff;
+  -moz-box-shadow: 2px 2px 2px #666;
+  -webkit-box-shadow: 2px 2px 2px #666;
+  box-shadow: 2px 2px 2px #666;
+}
+
+.menu .menu_scroller .content {
+  margin:0;
+  max-height:150px;
+}
+
+.menu .menu_scroller.disabled .content {
+  margin-right:0;
+}
+
+.menu li {
+  font-size:14px;
+  white-space:nowrap;
+  margin:2px 0 0 0;
+  list-style:none;
+  vertical-align:bottom;
+}
+
+.menu li a {
+  text-decoration:none;
+  line-height:30px;
+  color:#222;
+  padding:2px 5px;
+  display:block;
+  background-color:#fff;
+  height:28px;
+  vertical-align:middle;
+}
+
+.menu li a span {
+  padding:0 2px;
+}
+
+.menu li a:hover span,
+.menu li a:link span,
+.menu li a:active span,
+.menu li a:visited span{
+  text-decoration:none;
+  color:#222;
+}
+
+.menu li a:hover,
+.menu li a.selected {
+  background-color:#e9d4c7;
+  text-decoration:none;
+}
+.pulldown {
+  position:relative;
+  height:30px;
+  /* inline-block with IE7 hack */
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+.pulldown.placeholder {
+  font-style:italic;
+}
+
+.pulldown .button:link,
+.pulldown .button:active,
+.pulldown .button:hover,
+.pulldown .button:visited {
+  color:#333;
+  text-decoration:none;
+}
+
+.radio_group .choice:hover {
+  cursor:pointer;
+}
+
+.radio_group .mark {
+  margin:0 5px 0 0;
+  width:20px;
+  height:20px;
+  line-height:17px;
+  border:1px solid #666;
+  -moz-border-radius: 11px;
+  -webkit-border-radius: 11px;
+  border-radius: 11px;
+  color:#222;
+  font-family:Verdana;
+  text-align:center;
+  font-size:16px;
+}
+.radio_group .choice:hover .mark {
+  background-color:#eee;
+  border-color:#222;
+}
+
+.radio_group ul {
+  margin:0;
+  padding:0;
+}
+
+.radio_group li {
+  margin-left:10px;
+}
+
+.radio_group li a {
+  text-decoration:none;
+}
+
+.radio_group li a.choice {
+  /* inline-block with IE7 hack */
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align:top;
+}
+
+.radio_group .label {
+  line-height:22px;
+  color:#222;
+  cursor:pointer;
+}
+
+.radio_group .mark,
+.radio_group li,
+.radio_group .label {
+  /* inline-block with IE7 hack */
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.scroller {
+  outline: none;
+  position:relative;
+}
+
+.scroller .content_wrapper{
+  margin-right:13px;
+}
+
+.scroller.disabled .content_wrapper{
+  margin-right:1px;
+}
+
+.scroller .content {
+  overflow:hidden;
+  margin-right:9px;
+}
+
+.scroller.disabled .content {
+  margin-right:5px;
+}
+
+.scroller .tray {
+  position:absolute;
+  right:3px;
+  top:3px;
+  bottom:3px;
+  width:10px;
+  background-color:#eee;
+}
+
+.scroller.disabled .tray {
+  visibility:hidden;
+}
+
+.scroller .knob {
+  position:absolute;
+  right:1px;
+  width:8px;
+  cursor:move;
+}
+
+.scroller .knob_top {
+  position:absolute;
+  right:0;
+  left:0;
+  height:11px;
+  background-color:#555;
+}
+
+.knob_middle {
+  position:absolute;
+  right:0;
+  left:0;
+  top:10px;
+  bottom:10px;
+  background-color:#555;
+}
+
+.knob_bottom {
+  position:absolute;
+  right:0;
+  left:0;
+  bottom:0px;
+  height:10px;
+  background-color:#555;
+}
+.tab_set .tab_bar {
+  height:29px;
+  padding-left:20px;
+}
+
+.tab_set .tab {
+  text-decoration:none;
+  color:#222;
+  border:1px solid #222;
+  padding:0 10px;
+  margin:0 5px 0 0;
+  height:28px;
+  line-height:30px;
+  /* inline-block with IE7 hack */
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+.tab_set .tab.selected,
+.tab_set .tab.selected:hover {
+  background-color:#ddd;
+}
+
+.tab_set .tab:hover {
+  background-color:#eee;
+}
+
+.tab_set .content_container {
+  border:1px solid #666;
+  padding:10px;
+}
+.table_view {
+  border:1px solid #222;
+}
+
+.table_view table {
+  text-align:left;
+  width:100%;
+}
+
+.table_view table th {
+  padding:0;
+  margin:0;
+  background-color:#eee;
+  line-height:20px;
+  position:relative
+}
+
+.table_view th.first {
+  padding-left:5px;
+  border-left:none;
+}
+
+.table_view th.last {
+  padding-right:5px;
+}
+
+.table_view .content{
+  background-color:#fff;
+  padding:5px;
+}
+
+.table_view .wrapper {
+  padding:5px;
+}
+
+.table_view tr.first .wrapper {
+}
+
+.table_view .content td {
+  white-space:nowrap;
+  overflow:hidden;
+}
+
+.table_view.clickable .content tr:hover .wrapper {
+  background-color:#ddd;
+  cursor:pointer;
+}
+
+.table_view .glyph {
+  float:left;
+  margin-top:6px;
+  font-size:10px;
+}
+
+.table_view th.first .glyph {
+  padding-left:5px;
+}
+
+.table_view .sorted {
+  padding-left:16px;
+}
+.text_area {
+  position:relative;
+  border:1px solid #666;
+  background-color:#fff;
+  /* inline-block with IE7 hack */
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align:top;
+}
+
+.text_area.disabled {
+  filter:alpha(opacity=60);
+  opacity:0.6;
+}
+
+.text_area textarea {
+  border:none;
+  outline:none;
+  margin:5px 4px 4px 4px;
+  font-size:14px;
+  background-color:#fff;
+}
+.text_field {
+  position:relative;
+  border:1px solid #666;
+  width:200px;
+  height:28px;
+  background-color:#fff;
+  /* inline-block with IE7 hack */
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align:top;
+}
+
+.text_field.disabled {
+  filter:alpha(opacity=60);
+  opacity:0.6;
+}
+
+.text_field .input_wrapper {
+  position:absolute;
+  left:5px;
+  right:12px;
+  top:3px;
+}
+
+.text_field input {
+  width:100%;
+  border:0;
+  outline:none;
+  font-size:13px;
+}
+.time_picker .text_field {
+  width:80px;
+}
+
+.time_picker .menu li {
+  background-color:#fff;
+}
+
+.menu {
+  z-index:1000;
+}
+

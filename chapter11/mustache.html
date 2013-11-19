@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My App</title>
+</head>
+<body>
+
+
+<div id="myLibraryViewSection">
+	<div id="myelement"></div>
+</div>
+
+<div id='anotherViewSection'></div>
+
+
+ <script type="text/x-mustache-template" id="library-template">
+ <ul>
+ 	{{#library}}
+        <li>
+         <em>{{name}}</em> by {{author}}
+      </li>
+	{{/library}} 
+  </ul>
+ </script>
+
+<script src="js/external/jquery-1.10.2.js"></script>
+<script src="js/external/underscore.js"></script>
+<script src="js/external/backbone.js"></script>
+<script src="js/external/mustache.js"></script>
+
+
+<script>
+Book = Backbone.Model.extend({
+	 // urlRoot: 'http://localhost:8080/books/', //use when not utilizing collections 	  
+      initialize: function(){
+		  
+		   this.on("invalid", function(model, error){
+			   console.log("**Validation Error : " + error + "**");
+		   });
+           this.on("change", function(){
+			   console.log('Model Changes Detected:');
+			   if(this.hasChanged('name')){
+				   console.log('The name has changed from '  + this.previous('name') + ' to ' + this.get('name'));
+				   
+			   }
+			   if(this.hasChanged('year')){
+				   console.log('The year has changed')
+			   }
+			   console.log('Changed attributes: ' + JSON.stringify(this.changed));
+			   console.log('Previous attributes: ' + JSON.stringify(this.previousAttributes()));
+		   });
+		   this.on("change:name", function(){
+			   console.log('The name attribute has changed');  
+		   });
+      }, 
+	 
+   defaults: {
+     name: 'Book Title', 
+     author: 'No One'
+	}, 
+	
+	printDetails: function(){
+		console.log(this.get('name') + ' by ' + this.get('author'));
+	}, 
+	
+	validate: function(attrs){
+		if(attrs.year < 2000){
+			return 'Year must be after 2000';
+		}
+		if(!attrs.name){
+			return 'A name must be provided';
+		}
+	}, 
+	parse: function(response, xhr) {
+		response.bookType = 'ebook';
+		return response;
+	  }, 
+
+	
+});
+
+
+
+/** 
+ * Define a collection based on book 
+ **/
+ var Library = Backbone.Collection.extend({model: Book, 
+ 	url: 'http://localhost:8080/books/',	  
+
+ 	initialize: function(){
+ 		console.log('Creating a new library collection');
+ 		this.on("remove", function(removedModel, models, options){
+ 			console.log('element removed  at ' + options.index);
+ 		});
+
+ 		this.on('reset', function(){
+ 			console.log('Reset detected');
+ 		});
+
+ 	},
+ 	 comparator:  function(a, b) {
+  		return a.get('name') < b.get('name') ? -1 : 1;
+	 }, 
+
+	 parse: function(response, xhr) {
+	 	//customisations here
+		return response;
+	  }, 
+
+
+ });
+
+
+var bookOne = new Book({name: 'Beginning Backbone', author: 'James Sugrue', year: 2013}); 
+ var bookTwo = new Book({name: 'Pro Javascript Design Patterns', author:'Dustin Diaz, Ross Harmes', year: 2012});
+
+ var myLibrary = new Library([bookOne, bookTwo]);
+
+  //Define the Library View
+LibraryView = Backbone.View.extend({
+	
+	initialize: function(){
+		console.log('View created');
+	},
+
+	events: {
+		'click ' : 'alertBook'
+	},
+
+	template: Mustache.compile($("#library-template").html()),
+
+	render: function(){
+		var self = this; 
+		var output = self.template({'library': self.collection.toJSON()});
+		self.$el.append(output);
+		return self;
+    }, 
+
+    alertBook: function(e){
+    	alert('Book clicked');
+    }
+				  			
+});
+
+
+var thisBook = new Book({name : 'Beginning Backbone', 
+						 author: 'James Sugrue'});	
+
+
+//Create an instance of the view with a model and an element
+/*var myView = new LibraryView({
+							  model: thisBook, 
+				  			  el: '#myLibraryViewSection', 
+				  			});
+
+*/
+//myView.render();
+
+var myLibraryView = new LibraryView({
+					collection: myLibrary, 
+					el: '#myLibraryViewSection'
+	});
+
+myLibraryView.render();
+myLibraryView.delegateEvents( {
+		'mouseover #book ' : 'alertBook'
+	});
+//myLibraryView.remove();
+
+
+//Create a view that will build it's own DOM element 
+/*var myNewView = new LibraryView({model: thisBook, 
+  tagName: 'ul', 
+  className: 'libraryview', 
+  id: 'library',
+  attributes: {'data-date': new Date()}
+});
+console.log(myNewView.el);
+*/
+
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+.notifications {
+    top: 0;
+    left: 50%;
+    position: fixed;
+    margin-left: -200px;
+    width: 400px;
+}
+
+    .notification {
+        padding: 20px 15px 18px;
+        font-size: 20px;
+        text-align: center;
+        background-color: #fdfdfd;
+        color: #747474;
+        border-top: 1px solid #eeeeee;
+        box-shadow: 0 0 10px #e8e8e8;
+
+    }
+
+    .notification.success:before,
+    .notification.error:before,
+    .notification.loader em {
+        position: absolute;
+        margin-top: -10px;
+        margin-left: 185px;
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+    }
+
+    .notification.success:before {
+        background-color: #b0d26f;
+        box-shadow: -10px 0 #b0d26f,
+                    10px 0 #b0d26f;
+    }
+
+    .notification.error:before {
+        background-color: #d23c61;
+        box-shadow: -10px 0 #d23c61,
+                    10px 0 #d23c61;
+    }
+
+    .notification.loader em {
+        background-color: #a7a7a7;
+        width: 7px;
+        height: 7px;
+        margin-left: 370px;
+        border-radius: 50%;
+        margin-top: 3px;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-name: loading;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+
+    }
+
+    .notification.progress em {
+        margin-top: 10px;
+        display: block;
+        width: 10px;
+        background-color: #e0e0e0;
+        height: 20px;
+        -moz-transition: width 1s;
+        -webkit-transition: width 1s;
+        -o-transition: width 1s;
+        z-index: 1;
+    }
+
+    .notification.progress em:before {
+        content: "";
+        z-index: 0;
+        position: absolute;
+        width: 92%;
+        height: 18px;
+        margin-top: -2px;
+        margin-left: -2px;
+        display: block;
+        border: 1px solid #dadada;
+        padding: 2px;
+    }
+
+@-webkit-keyframes loading {
+
+    0% { background-color: white; }
+    100% { background-color: orange; }
+
+}
