@@ -8,5 +8,5 @@ All code is inline JavaScript within client/index.html. Comment out what you don
 ## Server
 You'll need to install node.js to have this server run properly. Simply execute `node server.js ` from the command line to get the server going. Make sure you have installed the express package via npm `npm install -g express`.
 
-Note that this application was built with an old version of express (3.3.4)
-To install this use `npm install -g express@3.3.4`
+
+> Note that this application was originally built with an old version of express (3.3.4). Although there have been updates to work with the latest version, if you run into problems you can  install this using `npm install -g express@3.3.4`
