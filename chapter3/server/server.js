@@ -2,6 +2,7 @@
  * A simple API hosted under localhost:8080/books
  */
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
 var bookId = 100; 
 
@@ -26,10 +27,11 @@ function removeBook(id){
     books.splice(bookIndex, 1);
 }
 
-app.configure(function () {
-    //Parses the JSON object given in the body request
-    app.use(express.bodyParser());
-});
+//Parses the JSON object given in the body request
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+app.use(bodyParser.json());
 
 var books = [
 {id: 98, author: 'Stephen King', name: 'The Shining', year: 1977}, 
@@ -139,9 +141,7 @@ var allowCrossDomain = function(req, response, next) {
     }
 };
 
-app.configure(function() {
-    app.use(allowCrossDomain);
-});
+app.use(allowCrossDomain);
 
 //start up the app on port 8080
 app.listen(8080); 
